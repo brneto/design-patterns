@@ -18,10 +18,5 @@ public class RubberDuck extends Duck {
 		// Looks like a rubberduck
 
 	}
-	
-	@Override
-	public void fly() {
-		// Overridden to do nothing
-	}
 
 }

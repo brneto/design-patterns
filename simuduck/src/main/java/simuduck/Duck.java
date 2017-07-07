@@ -1,7 +1,11 @@
 package simuduck;
 
+import simuduck.behavior.FlyBehavior;
+import simuduck.behavior.QuackBehavior;
 
 public abstract class Duck {
+	private FlyBehavior fly;
+	private QuackBehavior quack;
 
 	public Duck() {
 		// TODO Auto-generated constructor stub
@@ -19,10 +23,22 @@ public abstract class Duck {
 		
 	}
 	
-	public void fly() {
-		
+	public abstract void display();
+	
+	public void setFlyBehavior(FlyBehavior fly) {
+		this.fly = fly;
 	}
 	
-	public abstract void display();
+	public void performFly() {
+		fly.fly();
+	}
+	
+	public void setQuackBehavior(QuackBehavior quack) {
+		this.quack = quack;
+	}
+	
+	public void performQuack() {
+		quack.quack();	
+	}
 
 }

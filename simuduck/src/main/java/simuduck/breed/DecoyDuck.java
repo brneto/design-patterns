@@ -18,9 +18,4 @@ public class DecoyDuck extends Duck {
 		// Decoy duck
 	}
 
-	@Override
-	public void fly() {
-		// Overridden to do nothing
-	}
-
 }

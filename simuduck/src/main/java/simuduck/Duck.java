@@ -30,7 +30,7 @@ public abstract class Duck {
 	}
 	
 	public void performFly() {
-		fly.fly();
+		fly.perform();
 	}
 	
 	public void setQuackBehavior(QuackBehavior quack) {
@@ -38,7 +38,7 @@ public abstract class Duck {
 	}
 	
 	public void performQuack() {
-		quack.quack();	
+		quack.perform();	
 	}
 
 }

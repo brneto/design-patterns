@@ -1,4 +1,4 @@
-package simuduck.duckTypes;
+package simuduck.breed;
 
 import simuduck.Duck;
 

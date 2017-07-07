@@ -1,5 +1,6 @@
 package simuduck;
 
+
 public abstract class Duck {
 
 	public Duck() {

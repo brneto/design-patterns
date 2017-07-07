@@ -4,41 +4,30 @@ import simuduck.behavior.FlyBehavior;
 import simuduck.behavior.QuackBehavior;
 
 public abstract class Duck {
-	private FlyBehavior fly;
-	private QuackBehavior quack;
+	private FlyBehavior flyBehavior;
+	private QuackBehavior quackBehavior;
 
-	public Duck() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	}
-	
-	public void quack() {
-		
-	}
-	
-	public void swim() {
-		
-	}
-	
 	public abstract void display();
 	
-	public void setFlyBehavior(FlyBehavior fly) {
-		this.fly = fly;
+	public void swim() {
+		// All subclass duck swim the same way
+		System.out.println("I'm swimming!!");
+	}
+	
+	public void setFlyBehavior(FlyBehavior flyBehavior) {
+		this.flyBehavior = flyBehavior;
 	}
 	
 	public void performFly() {
-		fly.perform();
+		flyBehavior.perform();
 	}
 	
-	public void setQuackBehavior(QuackBehavior quack) {
-		this.quack = quack;
+	public void setQuackBehavior(QuackBehavior quackBehavior) {
+		this.quackBehavior = quackBehavior;
 	}
 	
 	public void performQuack() {
-		quack.perform();	
+		quackBehavior.perform();	
 	}
 
 }

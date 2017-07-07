@@ -1,4 +1,6 @@
-package simuduck;
+package simuduck.duckTypes;
+
+import simuduck.Duck;
 
 public class RubberDuck extends Duck {
 
@@ -15,6 +17,11 @@ public class RubberDuck extends Duck {
 	public void display() {
 		// Looks like a rubberduck
 
+	}
+	
+	@Override
+	public void fly() {
+		// Overridden to do nothing
 	}
 
 }

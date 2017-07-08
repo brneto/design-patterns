@@ -7,6 +7,15 @@ import simuduck.client.Duck;
 import simuduck.client.type.MallardDuck;
 import simuduck.client.type.ModelDuck;
 
+
+/**
+ * The Strategy Pattern:
+ * 
+ * Defines a family of algorithms (FlyBehavior and QuackBehavior),
+ * encapsulates each one, and makes them interchangeable.
+ * Strategy lets the algorithms vary independently from clients
+ * that use it.
+ */
 public class DuckSimulator {
 
 	public static void main(String[] args) {

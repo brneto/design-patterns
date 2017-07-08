@@ -6,24 +6,22 @@ import simuduck.flybehavior.FlyWithWings;
 import simuduck.quackbehavior.MuteQuack;
 import simuduck.quackbehavior.Quack;
 
-public class MiniDuckSimulator {
-	private Duck mallard;
-	private Duck model;
+public class DuckSimulator {
 
-	public MiniDuckSimulator() {
-		mallard = new MallardDuck();		
+	public static void main(String[] args) {
+		DuckSimulator simulator = new DuckSimulator();
+		Duck mallard = new MallardDuck();
+		Duck model = new ModelDuck();
+				
 		mallard.setFlyBehavior(new FlyWithWings());
 		mallard.setQuackBehavior(new Quack());
 		
-		model = new ModelDuck();
 		model.setFlyBehavior(new FlyRocketPowered());
 		model.setQuackBehavior(new MuteQuack());
-	}
-
-	public static void main(String[] args) {
-		MiniDuckSimulator simulator = new MiniDuckSimulator();
 		
-		simulator.perform(duck);
+		simulator.perform(mallard);
+		System.out.println("");
+		simulator.perform(model);
 	}
 	
 	public void perform(Duck duck) {

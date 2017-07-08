@@ -9,25 +9,24 @@ public abstract class Duck {
 
 	public abstract void display();
 	
-	public void swim() {
+	public final void swim() {
 		// All subclass duck swim the same way
 		System.out.println("I'm swimming!!");
 	}
 	
-	public void setFlyBehavior(FlyBehavior flyBehavior) {
-		this.flyBehavior = flyBehavior;
-	}
-	
-	public void performFly() {
-		flyBehavior.perform();
-	}
-	
-	public void setQuackBehavior(QuackBehavior quackBehavior) {
+	public final void setQuackBehavior(QuackBehavior quackBehavior) {
 		this.quackBehavior = quackBehavior;
 	}
 	
-	public void performQuack() {
+	public final void setFlyBehavior(FlyBehavior flyBehavior) {
+		this.flyBehavior = flyBehavior;
+	}
+	
+	public final void quack() {
 		quackBehavior.perform();	
 	}
-
+	
+	public final void fly() {
+		flyBehavior.perform();
+	}
 }

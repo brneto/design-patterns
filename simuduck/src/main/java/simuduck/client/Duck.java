@@ -1,4 +1,4 @@
-package simuduck;
+package simuduck.client;
 
 import simuduck.behavior.FlyBehavior;
 import simuduck.behavior.QuackBehavior;

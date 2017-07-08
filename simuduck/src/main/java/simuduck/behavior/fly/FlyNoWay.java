@@ -1,4 +1,4 @@
-package simuduck.flybehavior;
+package simuduck.behavior.fly;
 
 import simuduck.behavior.FlyBehavior;
 

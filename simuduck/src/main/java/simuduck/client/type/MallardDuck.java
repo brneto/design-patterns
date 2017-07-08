@@ -1,6 +1,6 @@
-package simuduck.ducktype;
+package simuduck.client.type;
 
-import simuduck.Duck;
+import simuduck.client.Duck;
 
 public class MallardDuck extends Duck {
 

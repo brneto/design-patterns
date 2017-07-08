@@ -1,4 +1,4 @@
-package simuduck.quackbehavior;
+package simuduck.behavior.quack;
 
 import simuduck.behavior.QuackBehavior;
 

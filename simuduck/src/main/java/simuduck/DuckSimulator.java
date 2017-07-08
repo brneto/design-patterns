@@ -1,10 +1,11 @@
-import simuduck.Duck;
-import simuduck.ducktype.MallardDuck;
-import simuduck.ducktype.ModelDuck;
-import simuduck.flybehavior.FlyRocketPowered;
-import simuduck.flybehavior.FlyWithWings;
-import simuduck.quackbehavior.MuteQuack;
-import simuduck.quackbehavior.Quack;
+package simuduck;
+import simuduck.behavior.fly.FlyRocketPowered;
+import simuduck.behavior.fly.FlyWithWings;
+import simuduck.behavior.quack.MuteQuack;
+import simuduck.behavior.quack.Quack;
+import simuduck.client.Duck;
+import simuduck.client.type.MallardDuck;
+import simuduck.client.type.ModelDuck;
 
 public class DuckSimulator {
 

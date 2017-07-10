@@ -1,9 +1,6 @@
 package weatherdata;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-import weatherdata.ui.Display;
+import weatherdata.subscriber.WeatherSubscriber;
 
 public class WeatherData {
 	
@@ -24,6 +21,8 @@ public class WeatherData {
 		float humidity = getHumidity();
 		float pressure = getPressure();
 		
+		WeatherSubscriber observer = new WeatherSubscriber();
+		observer.update(temp, humidity, pressure);
 	}
 
 }

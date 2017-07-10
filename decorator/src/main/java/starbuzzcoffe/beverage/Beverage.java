@@ -1,4 +1,4 @@
-package starbuzzcoffe;
+package starbuzzcoffe.beverage;
 
 public abstract class Beverage {
 	String description;

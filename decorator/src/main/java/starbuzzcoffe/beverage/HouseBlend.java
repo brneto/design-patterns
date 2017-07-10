@@ -1,6 +1,6 @@
-package starbuzzcoffe;
+package starbuzzcoffe.beverage;
 
-public class Espresso extends Beverage {
+public class HouseBlend extends Beverage {
 
 	@Override
 	public float cost() {

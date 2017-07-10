@@ -1,4 +1,4 @@
-package starbuzzcoffe;
+package starbuzzcoffe.beverage;
 
 public class DarkRoast extends Beverage {
 

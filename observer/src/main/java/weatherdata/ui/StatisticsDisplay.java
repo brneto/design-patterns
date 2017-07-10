@@ -7,7 +7,7 @@ public class StatisticsDisplay implements Display {
 	}
 
 	@Override
-	public void update() {
+	public void update(float temp, float humidity, float pressure) {
 		// TODO Auto-generated method stub
 
 	}

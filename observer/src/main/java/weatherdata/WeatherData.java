@@ -1,5 +1,10 @@
 package weatherdata;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
+import weatherdata.ui.Display;
+
 public class WeatherData {
 	
 	public float getTemperature() {
@@ -18,7 +23,6 @@ public class WeatherData {
 		float temp = getTemperature();
 		float humidity = getHumidity();
 		float pressure = getPressure();
-		
 		
 	}
 

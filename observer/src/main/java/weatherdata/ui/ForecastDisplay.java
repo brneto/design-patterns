@@ -1,22 +1,33 @@
 package weatherdata.ui;
 
+import java.util.Observable;
+import java.util.Observer;
+
 import weatherdata.WeatherData;
-import weatherdata.observer.Observer;
 
-public class ForecastDisplay implements Observer {
-
-	public ForecastDisplay() {
-		// TODO Auto-generated constructor stub
-	}
-
+public class ForecastDisplay implements Observer, DisplayElement {
+	private float currentPressure = 29.92f;
+	private float lastPressure;
+	
 	@Override
-	public void update() {
-		WeatherData weather = new WeatherData();
-		
-		float temp = weather.getTemperature();
-		float humidity = weather.getHumidity();
-		float pressure = weather.getPressure();
-
+	public void update(Observable o, Object arg) {
+		if (o instanceof WeatherData) {
+			WeatherData weatherData = (WeatherData) o;
+			lastPressure = currentPressure;
+			this.currentPressure = weatherData.getPressure();
+			display();
+		}
 	}
-
+	
+	@Override
+	public void display() {
+		// Display the forecast
+		if (currentPressure == lastPressure) {
+			System.out.println("Forecast: More of the same");
+		} else if (currentPressure >= 30f) {
+			System.out.println("Forecast: Improving weather on the way!");
+		} else if (currentPressure < 30f) {
+			System.out.println("Forecast: Watch out for cooler, rainy weather");
+		}
+	}
 }

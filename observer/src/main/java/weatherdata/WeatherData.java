@@ -1,24 +1,32 @@
 package weatherdata;
 
-import weatherdata.subject.WeatherSubject;
+import java.util.Observable;
 
-public class WeatherData {
+public class WeatherData extends Observable {
+	private float temperature, humidity, pressure;	
 	
 	public float getTemperature() {
-		return 27;
+		return temperature;
 	}
 	
 	public float getHumidity() {
-		return 70;
+		return humidity;
 	}
 	
 	public float getPressure() {
-		return 5;
+		return pressure;
 	}
 	
 	public void measurementsChanged() {
-		WeatherSubject subject = new WeatherSubject();
-		subject.notifyObservers();
+		setChanged();
+		notifyObservers();
+	}
+	
+	public void setMeasurements(float temperature, float humidity, float pressure) {
+		this.temperature = temperature;
+		this.humidity = humidity;
+		this.pressure = pressure;
+		measurementsChanged();
 	}
 
 }

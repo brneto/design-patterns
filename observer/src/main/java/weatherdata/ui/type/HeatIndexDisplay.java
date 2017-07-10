@@ -1,9 +1,10 @@
-package weatherdata.ui;
+package weatherdata.ui.type;
 
 import java.util.Observable;
 import java.util.Observer;
 
 import weatherdata.WeatherData;
+import weatherdata.ui.DisplayElement;
 
 public class HeatIndexDisplay implements Observer, DisplayElement {
 	private float temperature, humidity;

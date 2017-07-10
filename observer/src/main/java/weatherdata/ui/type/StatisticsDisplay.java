@@ -1,10 +1,11 @@
-package weatherdata.ui;
+package weatherdata.ui.type;
 
 import java.util.Locale;
 import java.util.Observable;
 import java.util.Observer;
 
 import weatherdata.WeatherData;
+import weatherdata.ui.DisplayElement;
 
 public class StatisticsDisplay implements Observer, DisplayElement {
 	float maxTemp, minTemp, avgTemp;

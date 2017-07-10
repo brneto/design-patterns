@@ -1,8 +1,9 @@
+package weatherdata.station;
 import weatherdata.WeatherData;
-import weatherdata.ui.CurrentConditionsDisplay;
-import weatherdata.ui.ForecastDisplay;
-import weatherdata.ui.HeatIndexDisplay;
-import weatherdata.ui.StatisticsDisplay;
+import weatherdata.ui.type.CurrentConditionsDisplay;
+import weatherdata.ui.type.ForecastDisplay;
+import weatherdata.ui.type.HeatIndexDisplay;
+import weatherdata.ui.type.StatisticsDisplay;
 
 public class WeatherStation {
 

@@ -1,15 +1,17 @@
 package weatherdata.ui;
 
-public class CurrentConditionsDisplay implements Display {
+import weatherdata.WeatherData;
+import weatherdata.observer.Observer;
 
-	public CurrentConditionsDisplay() {
-		// TODO Auto-generated constructor stub
-	}
+public class CurrentConditionsDisplay implements Observer {
 
 	@Override
-	public void update(float temp, float humidity, float pressure) {
-		// TODO Auto-generated method stub
-
+	public void update() {
+		WeatherData weather = new WeatherData();
+		
+		float temp = weather.getTemperature();
+		float humidity = weather.getHumidity();
+		float pressure = weather.getPressure();
 	}
 
 }

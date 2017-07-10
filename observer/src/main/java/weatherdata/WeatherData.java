@@ -1,6 +1,6 @@
 package weatherdata;
 
-import weatherdata.subscriber.WeatherSubscriber;
+import weatherdata.subject.WeatherSubject;
 
 public class WeatherData {
 	
@@ -17,12 +17,8 @@ public class WeatherData {
 	}
 	
 	public void measurementsChanged() {
-		float temp = getTemperature();
-		float humidity = getHumidity();
-		float pressure = getPressure();
-		
-		WeatherSubscriber observer = new WeatherSubscriber();
-		observer.update(temp, humidity, pressure);
+		WeatherSubject subject = new WeatherSubject();
+		subject.notifyObservers();
 	}
 
 }

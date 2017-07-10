@@ -1,15 +1,21 @@
 package weatherdata.ui;
 
-public class StatisticsDisplay implements Display {
+import weatherdata.WeatherData;
+import weatherdata.observer.Observer;
+
+public class StatisticsDisplay implements Observer {
 
 	public StatisticsDisplay() {
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public void update(float temp, float humidity, float pressure) {
-		// TODO Auto-generated method stub
-
+	public void update() {
+		WeatherData weather = new WeatherData();
+		
+		float temp = weather.getTemperature();
+		float humidity = weather.getHumidity();
+		float pressure = weather.getPressure();
 	}
 
 }

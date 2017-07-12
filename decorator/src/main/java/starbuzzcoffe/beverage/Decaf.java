@@ -5,7 +5,7 @@ public class Decaf extends Beverage {
 	@Override
 	public float cost() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 1.05F;
 	}
 
 }

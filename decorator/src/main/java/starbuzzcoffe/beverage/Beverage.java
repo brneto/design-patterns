@@ -1,7 +1,7 @@
 package starbuzzcoffe.beverage;
 
 public abstract class Beverage {
-	String description;
+	private String description;
 	
 	public String getDescription() {
 		return description;

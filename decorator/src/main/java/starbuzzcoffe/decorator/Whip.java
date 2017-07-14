@@ -7,7 +7,7 @@ public class Whip extends Condiment {
 	public Whip(Beverage beverage) {
 		super(beverage);
 	}
-	
+
 	@Override
 	public String description() {
 		return super.description() + ", Whip";

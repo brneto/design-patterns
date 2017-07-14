@@ -6,7 +6,7 @@ public class Decaf implements Beverage {
 	public String description() {
 		return "Decaf";
 	}
-	
+
 	@Override
 	public double cost() {
 		return 1.05F;

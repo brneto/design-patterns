@@ -6,7 +6,7 @@ public class Espresso implements Beverage {
 	public String description() {
 		return "Espresso";
 	}
-	
+
 	@Override
 	public double cost() {
 		return 1.99F;

@@ -3,7 +3,7 @@ package starbuzzcoffe.decorator;
 import starbuzzcoffe.component.Beverage;
 
 public class Soy extends Condiment {
-	
+
 	public Soy(Beverage beverage) {
 		super(beverage);
 	}

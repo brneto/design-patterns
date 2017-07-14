@@ -2,10 +2,10 @@ package starbuzzcoffe.decorator;
 
 import starbuzzcoffe.component.Beverage;
 
-public	abstract class CondimentDecorator extends Beverage {
+public	abstract class Condiment extends Beverage {
 	private Beverage beverage;
 
-	public CondimentDecorator(Beverage beverage) {
+	public Condiment(Beverage beverage) {
 		this.beverage = beverage;
 	}
 

@@ -2,7 +2,7 @@ package starbuzzcoffe.decorator;
 
 import starbuzzcoffe.component.Beverage;
 
-public class Whip extends CondimentDecorator {
+public class Whip extends Condiment {
 
 	public Whip(Beverage beverage) {
 		super(beverage);

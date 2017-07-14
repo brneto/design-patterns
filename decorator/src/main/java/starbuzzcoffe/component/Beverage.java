@@ -1,6 +1,6 @@
 package starbuzzcoffe.component;
 
-public interface Beverage {
-	public float cost();
-	public String getDescription();
+public abstract class Beverage {
+	public abstract String description();
+	public abstract double cost();	
 }

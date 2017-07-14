@@ -1,14 +1,14 @@
 package starbuzzcoffe.component;
 
-public class DarkRoast implements Beverage {
+public class DarkRoast extends Beverage {
 
 	@Override
-	public String getDescription() {
+	public String description() {
 		return "Dark Roast Coffee";
 	}
 	
 	@Override
-	public float cost() {
+	public double cost() {
 		return .99F;
 	}
 

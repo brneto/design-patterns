@@ -9,12 +9,12 @@ public class Soy extends CondimentDecorator {
 	}
 
 	@Override
-	public String getDescription() {
-		return super.getDescription() + ", Soy";
+	public String description() {
+		return super.description() + ", Soy";
 	}
 
 	@Override
-	public float cost() {
+	public double cost() {
 		return .15F + super.cost();
 	}
 

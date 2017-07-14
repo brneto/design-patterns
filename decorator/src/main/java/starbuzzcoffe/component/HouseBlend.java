@@ -1,14 +1,14 @@
 package starbuzzcoffe.component;
 
-public class HouseBlend implements Beverage {
+public class HouseBlend extends Beverage {
 
 	@Override
-	public String getDescription() {
+	public String description() {
 		return "House Blend Coffee";
 	}
 	
 	@Override
-	public float cost() {
+	public double cost() {
 		return .89F;
 	}
 

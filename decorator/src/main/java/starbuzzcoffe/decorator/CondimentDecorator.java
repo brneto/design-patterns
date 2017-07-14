@@ -2,7 +2,7 @@ package starbuzzcoffe.decorator;
 
 import starbuzzcoffe.component.Beverage;
 
-public	abstract class CondimentDecorator implements Beverage {
+public	abstract class CondimentDecorator extends Beverage {
 	private Beverage beverage;
 
 	public CondimentDecorator(Beverage beverage) {
@@ -10,13 +10,13 @@ public	abstract class CondimentDecorator implements Beverage {
 	}
 
 	@Override
-	public float cost() {
+	public double cost() {
 		return beverage.cost();
 	}
 
 	@Override
-	public String getDescription() {
-		return beverage.getDescription();
+	public String description() {
+		return beverage.description();
 	}
 	
 	

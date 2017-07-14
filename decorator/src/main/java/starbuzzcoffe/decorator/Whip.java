@@ -9,12 +9,12 @@ public class Whip extends CondimentDecorator {
 	}
 	
 	@Override
-	public String getDescription() {
-		return super.getDescription() + ", Whip";
+	public String description() {
+		return super.description() + ", Whip";
 	}
 
 	@Override
-	public float cost() {
+	public double cost() {
 		return .10F + super.cost();
 	}
 

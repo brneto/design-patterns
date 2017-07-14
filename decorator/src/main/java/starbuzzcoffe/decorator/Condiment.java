@@ -2,7 +2,7 @@ package starbuzzcoffe.decorator;
 
 import starbuzzcoffe.component.Beverage;
 
-public	abstract class Condiment extends Beverage {
+public	abstract class Condiment implements Beverage {
 	private Beverage beverage;
 
 	public Condiment(Beverage beverage) {

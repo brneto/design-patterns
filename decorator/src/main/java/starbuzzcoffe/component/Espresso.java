@@ -1,6 +1,6 @@
 package starbuzzcoffe.component;
 
-public class Espresso extends Beverage {
+public class Espresso implements Beverage {
 
 	@Override
 	public String description() {

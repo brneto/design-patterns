@@ -9,7 +9,7 @@ import starbuzzcoffe.component.HouseBlend;
 import starbuzzcoffe.decorator.Mocha;
 import starbuzzcoffe.decorator.Whip;
 
-public class StarbuzzCoffeeOrder {
+public class CoffeeOrder {
 
 	public static void main(String[] args) {
 		Beverage order;

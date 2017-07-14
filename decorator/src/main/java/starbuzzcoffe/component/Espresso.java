@@ -9,7 +9,7 @@ public class Espresso implements Beverage {
 
 	@Override
 	public double cost() {
-		return 1.99F;
+		return 1.99;
 	}
 
 }

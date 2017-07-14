@@ -15,7 +15,7 @@ public class Soy extends Condiment {
 
 	@Override
 	public double cost() {
-		return .15F + super.cost();
+		return .15 + super.cost();
 	}
 
 }

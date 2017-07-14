@@ -9,7 +9,7 @@ public class DarkRoast implements Beverage {
 
 	@Override
 	public double cost() {
-		return .99F;
+		return .99;
 	}
 
 }

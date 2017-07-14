@@ -15,7 +15,7 @@ public class Milk extends Condiment {
 
 	@Override
 	public double cost() {
-		return .10F + super.cost();
+		return .10 + super.cost();
 	}
 
 }

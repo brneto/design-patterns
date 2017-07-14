@@ -9,7 +9,7 @@ public class HouseBlend implements Beverage {
 
 	@Override
 	public double cost() {
-		return .89F;
+		return .89;
 	}
 
 }

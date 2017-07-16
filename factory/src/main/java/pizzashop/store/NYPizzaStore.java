@@ -5,20 +5,23 @@ import pizzashop.pizza.NYStyleClamPizza;
 import pizzashop.pizza.NYStylePepperoniPizza;
 import pizzashop.pizza.NYStyleVeggiePizza;
 import pizzashop.pizza.Pizza;
+import pizzashop.pizza.PizzaType;
 
 public class NYPizzaStore extends PizzaStore {
 
 	@Override
-	Pizza createPizza(String type) {
-		if (type.equals("cheese")) {
+	Pizza createPizza(PizzaType type) {
+		switch (type) {
+		case CHEESE:
 			return new NYStyleCheesePizza();
-		} else if (type.equals("veggie")) {
+		case VEGGIE:
 			return new NYStyleVeggiePizza();
-		} else if (type.equals("clam")) {
+		case CLAM:
 			return new NYStyleClamPizza();
-		} else if (type.equals("pepperoni")) {
+		case PEPPERONI:
 			return new NYStylePepperoniPizza();
-		} else
+		default:
 			return null;
+		}
 	}
 }

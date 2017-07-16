@@ -11,7 +11,7 @@ import pizzashop.product.PizzaType;
 public class CaliforniaPizzaStore extends PizzaStore {
 
 	@Override
-	Pizza createPizza(PizzaType type) throws InvalidPizzaType {
+	public Pizza createPizza(PizzaType type) throws InvalidPizzaType {
 		switch (type) {
 		case CHEESE:
 			return new CaliforniaStyleCheesePizza();

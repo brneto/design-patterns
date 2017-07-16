@@ -16,6 +16,6 @@ public abstract class PizzaStore {
 		return pizza;
 	}
 
-	abstract Pizza createPizza(PizzaType type) throws InvalidPizzaType;
+	public abstract Pizza createPizza(PizzaType type) throws InvalidPizzaType;
 
 }

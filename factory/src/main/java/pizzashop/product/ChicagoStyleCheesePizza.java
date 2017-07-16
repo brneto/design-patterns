@@ -2,28 +2,17 @@ package pizzashop.product;
 
 public class ChicagoStyleCheesePizza extends Pizza {
 
-	@Override
-	public void prepare() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void bake() {
-		// TODO Auto-generated method stub
-
+	public ChicagoStyleCheesePizza() {
+		name = "Chicago Style Deep Dish Cheese Pizza";
+		dough = "Extra Thick Crust Dough";
+		sauce = "Plum Tomato Sauce";
+		
+		toppings.add("Shredded Mozzarella Cheese");
 	}
 
 	@Override
 	public void cut() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void box() {
-		// TODO Auto-generated method stub
-
+		System.out.println("Cutting the pizza into square slices");
 	}
 
 }

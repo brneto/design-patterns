@@ -1,7 +1,8 @@
-package pizzashop.store;
+package pizzashop.factory;
 
-import pizzashop.pizza.Pizza;
-import pizzashop.pizza.PizzaType;
+import pizzashop.exception.InvalidPizzaType;
+import pizzashop.product.Pizza;
+import pizzashop.product.PizzaType;
 
 public abstract class PizzaStore {
 
@@ -15,6 +16,6 @@ public abstract class PizzaStore {
 		return pizza;
 	}
 
-	abstract Pizza createPizza(PizzaType type);
+	abstract Pizza createPizza(PizzaType type) throws InvalidPizzaType;
 
 }

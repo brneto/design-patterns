@@ -1,6 +1,6 @@
-package pizzashop.pizza;
+package pizzashop.product;
 
-public class ChicagoStyleClamPizza implements Pizza {
+public class CaliforniaStylePepperoniPizza extends Pizza {
 
 	@Override
 	public void prepare() {

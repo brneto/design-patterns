@@ -14,12 +14,12 @@ public class NYPizzaStore extends PizzaStore {
 		switch (type) {
 		case CHEESE:
 			return new NYStyleCheesePizza();
-		case VEGGIE:
-			return new NYStyleVeggiePizza();
-		case CLAM:
-			return new NYStyleClamPizza();
 		case PEPPERONI:
 			return new NYStylePepperoniPizza();
+		case CLAM:
+			return new NYStyleClamPizza();
+		case VEGGIE:
+			return new NYStyleVeggiePizza();
 		default:
 			return null;
 		}

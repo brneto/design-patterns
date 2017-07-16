@@ -1,6 +1,6 @@
-package pizzashop.exception;
+package pizzashop.product.exception;
 
-import pizzashop.product.PizzaType;
+import pizzashop.product.type.PizzaType;
 
 public class InvalidPizzaType extends RuntimeException {
 	private static final long serialVersionUID = 6957556692420127592L;

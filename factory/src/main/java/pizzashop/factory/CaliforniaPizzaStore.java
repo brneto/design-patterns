@@ -1,17 +1,17 @@
 package pizzashop.factory;
 
-import pizzashop.exception.InvalidPizzaType;
 import pizzashop.product.CaliforniaStyleCheesePizza;
 import pizzashop.product.CaliforniaStyleClamPizza;
 import pizzashop.product.CaliforniaStylePepperoniPizza;
 import pizzashop.product.CaliforniaStyleVeggiePizza;
 import pizzashop.product.Pizza;
-import pizzashop.product.PizzaType;
+import pizzashop.product.exception.InvalidPizzaType;
+import pizzashop.product.type.PizzaType;
 
 public class CaliforniaPizzaStore extends PizzaStore {
 
 	@Override
-	public Pizza createPizza(PizzaType type) throws InvalidPizzaType {
+	Pizza createPizza(PizzaType type) throws InvalidPizzaType {
 		switch (type) {
 		case CHEESE:
 			return new CaliforniaStyleCheesePizza();

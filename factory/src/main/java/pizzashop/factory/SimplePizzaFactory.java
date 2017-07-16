@@ -5,8 +5,9 @@ import pizzashop.pizza.GreekPizza;
 import pizzashop.pizza.PepperoniPizza;
 import pizzashop.pizza.Pizza;
 
-public class SimplePizzaFactory {
+public class SimplePizzaFactory implements PizzaFactory {
 
+	@Override
 	public Pizza createPizza(String type) {
 		Pizza pizza = null;
 

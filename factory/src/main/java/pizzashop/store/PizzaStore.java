@@ -1,7 +1,7 @@
-package pizzashop;
+package pizzashop.store;
 
-import pizzashop.factory.Pizza;
 import pizzashop.factory.SimplePizzaFactory;
+import pizzashop.pizza.Pizza;
 
 public class PizzaStore {
 	SimplePizzaFactory factory;

@@ -1,4 +1,4 @@
-package pizzashop.factory;
+package pizzashop.pizza;
 
 public class CheesePizza implements Pizza {
 

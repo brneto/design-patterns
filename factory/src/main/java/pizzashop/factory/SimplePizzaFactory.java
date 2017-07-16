@@ -1,5 +1,10 @@
 package pizzashop.factory;
 
+import pizzashop.pizza.CheesePizza;
+import pizzashop.pizza.GreekPizza;
+import pizzashop.pizza.PepperoniPizza;
+import pizzashop.pizza.Pizza;
+
 public class SimplePizzaFactory {
 
 	public Pizza createPizza(String type) {

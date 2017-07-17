@@ -1,8 +1,8 @@
 package pizzashop.factory;
 
-import pizzashop.product.Pizza;
-import pizzashop.product.exception.InvalidPizzaType;
-import pizzashop.product.type.PizzaType;
+import pizzashop.product.pizza.Pizza;
+import pizzashop.product.pizza.exception.InvalidPizzaType;
+import pizzashop.product.pizza.type.PizzaType;
 
 public interface PizzaFactory {
 	public Pizza createPizza(PizzaType type) throws InvalidPizzaType;

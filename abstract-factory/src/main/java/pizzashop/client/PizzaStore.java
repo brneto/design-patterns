@@ -1,8 +1,8 @@
 package pizzashop.client;
 
 import pizzashop.factory.PizzaFactory;
-import pizzashop.product.Pizza;
-import pizzashop.product.type.PizzaType;
+import pizzashop.product.pizza.Pizza;
+import pizzashop.product.pizza.type.PizzaType;
 
 public class PizzaStore {
 	PizzaFactory pizzaFactory;

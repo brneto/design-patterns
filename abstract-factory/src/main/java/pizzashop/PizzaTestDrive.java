@@ -2,9 +2,9 @@ package pizzashop;
 
 import pizzashop.client.PizzaStore;
 import pizzashop.factory.PizzaFactory;
-import pizzashop.factory.SimplePizzaFactory;
-import pizzashop.product.Pizza;
-import pizzashop.product.type.PizzaType;
+import pizzashop.factory.concrete.SimplePizzaFactory;
+import pizzashop.product.pizza.Pizza;
+import pizzashop.product.pizza.type.PizzaType;
 
 public class PizzaTestDrive {
 

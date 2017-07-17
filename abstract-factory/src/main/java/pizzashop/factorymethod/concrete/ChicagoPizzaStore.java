@@ -17,6 +17,7 @@ public class ChicagoPizzaStore extends PizzaStore {
 	protected Pizza createPizza(PizzaType type) throws InvalidPizzaType {
 		Pizza pizza;
 		PizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory();
+
 		switch (type) {
 		case CHEESE:
 			pizza = new CheesePizza(ingredientFactory);

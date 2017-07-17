@@ -13,10 +13,10 @@ public class VeggiePizza extends Pizza {
 	@Override
 	public void prepare() {
 		System.out.println("preparing " + getName());
-		setDough(ingredientFactory.createDough());
-		setSauce(ingredientFactory.createSauce());
-		setCheese(ingredientFactory.createCheese());
-		setVeggies(ingredientFactory.createVerggies());
+		dough = ingredientFactory.createDough();
+		sauce = ingredientFactory.createSauce();
+		cheese = ingredientFactory.createCheese();
+		veggies = ingredientFactory.createVerggies();
 	}
 
 }

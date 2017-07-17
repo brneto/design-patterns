@@ -13,9 +13,9 @@ public class GreekPizza extends Pizza {
 	@Override
 	public void prepare() {
 		System.out.println("preparing " + getName());
-		setDough(ingredientFactory.createDough());
-		setSauce(ingredientFactory.createSauce());
-		setCheese(ingredientFactory.createCheese());
+		dough = ingredientFactory.createDough();
+		sauce = ingredientFactory.createSauce();
+		cheese = ingredientFactory.createCheese();
 	}
 
 }

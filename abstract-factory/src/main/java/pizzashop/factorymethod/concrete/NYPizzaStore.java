@@ -14,29 +14,26 @@ import pizzashop.product.pizza.type.PizzaType;
 public class NYPizzaStore extends PizzaStore {
 
 	protected Pizza createPizza(PizzaType type) throws InvalidPizzaType {
-		Pizza pizza;
+		String style = "New York";
 		PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
 		
 		switch (type) {
 		case CHEESE:
-			pizza = new CheesePizza(ingredientFactory);
-			pizza.setName("New York Style Cheese Pizza");
-			return pizza;
+			return pizzaStyle(new CheesePizza(ingredientFactory), style);
 		case PEPPERONI:
-			pizza = new PepperoniPizza(ingredientFactory);
-			pizza.setName("New York Style Pepperoni Pizza");
-			return pizza;
+			return pizzaStyle(new PepperoniPizza(ingredientFactory), style);
 		case CLAM:
-			pizza = new ClamPizza(ingredientFactory);
-			pizza.setName("New York Style Clam Pizza");
-			return pizza;
+			return pizzaStyle(new ClamPizza(ingredientFactory), style);
 		case VEGGIE:
-			pizza = new VeggiePizza(ingredientFactory);
-			pizza.setName("New York Style Veggie Pizza");
-			return pizza;
+			return pizzaStyle(new VeggiePizza(ingredientFactory), style);
 		default:
 			throw new InvalidPizzaType(type);
 		}
+	}
+	
+	private Pizza pizzaStyle(Pizza pizza, String style) {
+		pizza.setName(style + " Style Cheese Pizza");
+		return pizza;
 	}
 
 }

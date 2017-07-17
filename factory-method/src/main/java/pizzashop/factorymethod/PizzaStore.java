@@ -1,4 +1,4 @@
-package pizzashop.factory;
+package pizzashop.factorymethod;
 
 import pizzashop.product.Pizza;
 import pizzashop.product.exception.InvalidPizzaType;
@@ -16,6 +16,6 @@ public abstract class PizzaStore {
 		return pizza;
 	}
 
-	abstract Pizza createPizza(PizzaType type) throws InvalidPizzaType;
+	protected abstract Pizza createPizza(PizzaType type) throws InvalidPizzaType;
 
 }

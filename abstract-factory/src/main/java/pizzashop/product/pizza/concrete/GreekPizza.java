@@ -1,35 +1,21 @@
 package pizzashop.product.pizza.concrete;
 
+import pizzashop.factory.ingredient.PizzaIngredientFactory;
 import pizzashop.product.pizza.Pizza;
 
 public class GreekPizza extends Pizza {
+	PizzaIngredientFactory ingredientFactory;
 	
-	public GreekPizza() {
-		name = "Greek Pizza";
-		dough = "Extra Thick Crust Dough";
-		sauce = "Plum Tomato Sauce";
-		
-		toppings.add("Shredded Mozzarella Cheese");
+	public GreekPizza(PizzaIngredientFactory ingredientFactory) {
+		this.ingredientFactory = ingredientFactory;
 	}
 
 	@Override
 	public void prepare() {
-		System.out.println("preparing greek pizza...");
-	}
-
-	@Override
-	public void bake() {
-		System.out.println("baking greek pizza...");
-	}
-
-	@Override
-	public void cut() {
-		System.out.println("cutting greek pizza...");
-	}
-
-	@Override
-	public void box() {
-		System.out.println("boxing greek pizza...");
+		System.out.println("preparing " + getName());
+		setDough(ingredientFactory.createDough());
+		setSauce(ingredientFactory.createSauce());
+		setCheese(ingredientFactory.createCheese());
 	}
 
 }

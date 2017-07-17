@@ -1,9 +1,9 @@
 package pizzashop;
 
-import pizzashop.factory.CaliforniaPizzaStore;
-import pizzashop.factory.ChicagoPizzaStore;
-import pizzashop.factory.NYPizzaStore;
-import pizzashop.factory.PizzaStore;
+import pizzashop.factorymethod.PizzaStore;
+import pizzashop.factorymethod.concrete.CaliforniaPizzaStore;
+import pizzashop.factorymethod.concrete.ChicagoPizzaStore;
+import pizzashop.factorymethod.concrete.NYPizzaStore;
 import pizzashop.product.Pizza;
 import pizzashop.product.type.PizzaType;
 

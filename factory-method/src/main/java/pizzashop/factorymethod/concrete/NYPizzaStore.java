@@ -1,17 +1,18 @@
-package pizzashop.factory;
+package pizzashop.factorymethod.concrete;
 
-import pizzashop.product.NYStyleCheesePizza;
-import pizzashop.product.NYStyleClamPizza;
-import pizzashop.product.NYStylePepperoniPizza;
-import pizzashop.product.NYStyleVeggiePizza;
+import pizzashop.factorymethod.PizzaStore;
 import pizzashop.product.Pizza;
+import pizzashop.product.concrete.NYStyleCheesePizza;
+import pizzashop.product.concrete.NYStyleClamPizza;
+import pizzashop.product.concrete.NYStylePepperoniPizza;
+import pizzashop.product.concrete.NYStyleVeggiePizza;
 import pizzashop.product.exception.InvalidPizzaType;
 import pizzashop.product.type.PizzaType;
 
 public class NYPizzaStore extends PizzaStore {
 
 	@Override
-	Pizza createPizza(PizzaType type) throws InvalidPizzaType {
+	protected Pizza createPizza(PizzaType type) throws InvalidPizzaType {
 		switch (type) {
 		case CHEESE:
 			return new NYStyleCheesePizza();

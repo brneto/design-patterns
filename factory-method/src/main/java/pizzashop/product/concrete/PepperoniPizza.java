@@ -1,4 +1,6 @@
-package pizzashop.product;
+package pizzashop.product.concrete;
+
+import pizzashop.product.Pizza;
 
 public class PepperoniPizza extends Pizza {
 

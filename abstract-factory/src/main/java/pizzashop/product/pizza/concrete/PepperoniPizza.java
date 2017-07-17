@@ -1,35 +1,21 @@
 package pizzashop.product.pizza.concrete;
 
+import pizzashop.factory.ingredient.PizzaIngredientFactory;
 import pizzashop.product.pizza.Pizza;
 
 public class PepperoniPizza extends Pizza {
+	PizzaIngredientFactory ingredientFactory;
 	
-	public PepperoniPizza() {
-		name = "Pepperoni Pizza";
-		dough = "Extra Thick Crust Dough";
-		sauce = "Plum Tomato Sauce";
-		
-		toppings.add("Shredded Mozzarella Cheese");
+	public PepperoniPizza(PizzaIngredientFactory ingredientFactory) {
+		this.ingredientFactory = ingredientFactory;
 	}
 
 	@Override
 	public void prepare() {
-		System.out.println("preparing pepperoni pizza...");
-	}
-
-	@Override
-	public void bake() {
-		System.out.println("baking pepperoni pizza...");
-	}
-
-	@Override
-	public void cut() {
-		System.out.println("cutting pepperoni pizza...");
-	}
-
-	@Override
-	public void box() {
-		System.out.println("boxing pepperoni pizza...");
+		System.out.println("preparing " + getName());
+		setDough(ingredientFactory.createDough());
+		setSauce(ingredientFactory.createSauce());
+		setPepperoni(ingredientFactory.createPepperoni());
 	}
 
 }

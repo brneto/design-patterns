@@ -1,4 +1,4 @@
-package pizzashop.factory;
+package pizzashop.factory.ingredient;
 
 import pizzashop.product.ingredient.Cheese;
 import pizzashop.product.ingredient.Clams;

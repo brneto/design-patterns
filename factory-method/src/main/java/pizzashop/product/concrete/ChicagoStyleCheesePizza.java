@@ -1,12 +1,14 @@
-package pizzashop.product;
+package pizzashop.product.concrete;
 
-public class CaliforniaStyleCheesePizza extends Pizza {
+import pizzashop.product.Pizza;
 
-	public CaliforniaStyleCheesePizza() {
-		name = "California Style Deep Dish Cheese Pizza";
+public class ChicagoStyleCheesePizza extends Pizza {
+
+	public ChicagoStyleCheesePizza() {
+		name = "Chicago Style Deep Dish Cheese Pizza";
 		dough = "Extra Thick Crust Dough";
 		sauce = "Plum Tomato Sauce";
-
+		
 		toppings.add("Shredded Mozzarella Cheese");
 	}
 

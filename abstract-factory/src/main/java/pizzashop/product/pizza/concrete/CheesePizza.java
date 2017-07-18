@@ -1,6 +1,6 @@
 package pizzashop.product.pizza.concrete;
 
-import pizzashop.factory.ingredient.PizzaIngredientFactory;
+import pizzashop.abstractfactory.ingredient.PizzaIngredientFactory;
 import pizzashop.product.pizza.Pizza;
 
 public class CheesePizza extends Pizza {

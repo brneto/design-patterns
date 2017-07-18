@@ -1,7 +1,7 @@
 package pizzashop.factorymethod.concrete;
 
-import pizzashop.factory.ingredient.PizzaIngredientFactory;
-import pizzashop.factory.ingredient.concrete.NYPizzaIngredientFactory;
+import pizzashop.abstractfactory.ingredient.PizzaIngredientFactory;
+import pizzashop.abstractfactory.ingredient.concrete.NYPizzaIngredientFactory;
 import pizzashop.factorymethod.PizzaStore;
 import pizzashop.product.pizza.Pizza;
 import pizzashop.product.pizza.concrete.CheesePizza;

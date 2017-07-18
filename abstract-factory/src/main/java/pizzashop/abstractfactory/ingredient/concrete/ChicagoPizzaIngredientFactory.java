@@ -1,6 +1,6 @@
-package pizzashop.factory.ingredient.concrete;
+package pizzashop.abstractfactory.ingredient.concrete;
 
-import pizzashop.factory.ingredient.PizzaIngredientFactory;
+import pizzashop.abstractfactory.ingredient.PizzaIngredientFactory;
 import pizzashop.product.ingredient.Cheese;
 import pizzashop.product.ingredient.Clams;
 import pizzashop.product.ingredient.Dough;

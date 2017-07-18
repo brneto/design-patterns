@@ -7,14 +7,13 @@ import pizzashop.product.ingredient.Dough;
 import pizzashop.product.ingredient.Pepperoni;
 import pizzashop.product.ingredient.Sauce;
 import pizzashop.product.ingredient.Veggie;
-import pizzashop.product.ingredient.concrete.FreshClams;
-import pizzashop.product.ingredient.concrete.Garlic;
-import pizzashop.product.ingredient.concrete.Mozzarella;
-import pizzashop.product.ingredient.concrete.Mushroom;
-import pizzashop.product.ingredient.concrete.Onion;
+import pizzashop.product.ingredient.concrete.BlackOlives;
+import pizzashop.product.ingredient.concrete.Eggplant;
+import pizzashop.product.ingredient.concrete.FrozenClams;
+import pizzashop.product.ingredient.concrete.MozzarellaCheese;
 import pizzashop.product.ingredient.concrete.PlumTomatoSauce;
-import pizzashop.product.ingredient.concrete.RedPepper;
 import pizzashop.product.ingredient.concrete.SlicedPepperoni;
+import pizzashop.product.ingredient.concrete.Spinach;
 import pizzashop.product.ingredient.concrete.ThickCrustDough;
 
 public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
@@ -31,12 +30,14 @@ public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 
 	@Override
 	public Cheese createCheese() {
-		return new Mozzarella();
+		return new MozzarellaCheese();
 	}
 
 	@Override
 	public Veggie[] createVerggies() {
-		Veggie[] veggies = { new Garlic(), new Onion(), new Mushroom(), new RedPepper() };
+		Veggie[] veggies = { new BlackOlives(),
+							 new Spinach(),
+							 new Eggplant() };
 		return veggies;
 	}
 
@@ -47,7 +48,7 @@ public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 
 	@Override
 	public Clams createClam() {
-		return new FreshClams();
+		return new FrozenClams();
 	}
 
 }

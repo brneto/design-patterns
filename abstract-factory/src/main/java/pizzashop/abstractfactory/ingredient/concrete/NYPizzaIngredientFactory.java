@@ -7,13 +7,14 @@ import pizzashop.product.ingredient.Dough;
 import pizzashop.product.ingredient.Pepperoni;
 import pizzashop.product.ingredient.Sauce;
 import pizzashop.product.ingredient.Veggie;
-import pizzashop.product.ingredient.concrete.BlackOlives;
-import pizzashop.product.ingredient.concrete.EggPlant;
-import pizzashop.product.ingredient.concrete.FrozenClams;
+import pizzashop.product.ingredient.concrete.FreshClams;
+import pizzashop.product.ingredient.concrete.Garlic;
 import pizzashop.product.ingredient.concrete.MarinaraSauce;
+import pizzashop.product.ingredient.concrete.Mushroom;
+import pizzashop.product.ingredient.concrete.Onion;
+import pizzashop.product.ingredient.concrete.RedPepper;
 import pizzashop.product.ingredient.concrete.ReggianoCheese;
 import pizzashop.product.ingredient.concrete.SlicedPepperoni;
-import pizzashop.product.ingredient.concrete.Spinach;
 import pizzashop.product.ingredient.concrete.ThinCrustDough;
 
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
@@ -35,7 +36,10 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 
 	@Override
 	public Veggie[] createVerggies() {
-		Veggie[] veggies = { new Spinach(), new BlackOlives(), new EggPlant() };
+		Veggie[] veggies = { new Garlic(),
+							 new Onion(),
+							 new Mushroom(),
+							 new RedPepper() };
 		return veggies;
 	}
 
@@ -46,7 +50,7 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 
 	@Override
 	public Clams createClam() {
-		return new FrozenClams();
+		return new FreshClams();
 	}
 
 }

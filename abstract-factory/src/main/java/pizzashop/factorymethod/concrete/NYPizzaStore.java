@@ -12,7 +12,8 @@ import pizzashop.product.pizza.exception.InvalidPizzaType;
 import pizzashop.product.pizza.type.PizzaType;
 
 public class NYPizzaStore extends PizzaStore {
-
+	
+	@Override
 	protected Pizza createPizza(PizzaType type) throws InvalidPizzaType {
 		String style = "New York";
 		PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();

@@ -1,7 +1,7 @@
 package chocoholic.singleton;
 
 public class ChocolateBoiler {
-	private volatile static ChocolateBoiler instance = null;
+	private volatile static ChocolateBoiler instance;
 	private boolean empty;
 	private boolean boiled;
 

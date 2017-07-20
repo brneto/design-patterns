@@ -1,6 +1,6 @@
 package chocoholic.singleton.synchronizedmethod;
 
-public class ChocolateBoiler {
+public final class ChocolateBoiler {
 	private static ChocolateBoiler instance;
 	private boolean empty;
 	private boolean boiled;

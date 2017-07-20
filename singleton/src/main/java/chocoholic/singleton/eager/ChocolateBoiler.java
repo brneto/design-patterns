@@ -1,6 +1,6 @@
 package chocoholic.singleton.eager;
 
-public class ChocolateBoiler {
+public final class ChocolateBoiler {
 	private static ChocolateBoiler instance = new ChocolateBoiler();
 	private boolean empty;
 	private boolean boiled;

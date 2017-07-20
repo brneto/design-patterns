@@ -1,7 +1,7 @@
-package chocoholic.singleton.synchronizedmethod;
+package chocoholic.singleton;
 
 public class ChocolateBoiler {
-	private static ChocolateBoiler instance;
+	private volatile static ChocolateBoiler instance;
 	private boolean empty;
 	private boolean boiled;
 
@@ -10,10 +10,12 @@ public class ChocolateBoiler {
 		boiled = false;
 	}
 	
-	public synchronized static ChocolateBoiler getInstance() {
-		if (instance == null) {
-			instance = new ChocolateBoiler();
-		}
+	public static ChocolateBoiler getInstance() {
+		if (instance == null)
+			synchronized (ChocolateBoiler.class) {
+				if (instance == null)
+					instance = new ChocolateBoiler();
+			}
 		return instance;
 	}
 	

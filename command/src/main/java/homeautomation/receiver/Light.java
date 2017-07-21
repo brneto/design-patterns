@@ -3,11 +3,11 @@ package homeautomation.receiver;
 public class Light {
 
 	public void on() {
-		System.out.println("Lights on!");
+		System.out.println("Light is On");
 	}
 
 	public void off() {
-		System.out.println("Lights off!");
+		System.out.println("Light is Off!");
 	}
 
 }

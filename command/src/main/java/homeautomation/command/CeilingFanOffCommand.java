@@ -1,0 +1,23 @@
+package homeautomation.command;
+
+import homeautomation.receiver.CeilingFan;
+
+public class CeilingFanOffCommand implements Command {
+	CeilingFan ceilingFan;
+
+	public CeilingFanOffCommand(CeilingFan ceilingFan) {
+		this.ceilingFan = ceilingFan;
+	}
+
+	@Override
+	public void execute() {
+		ceilingFan.off();
+	}
+
+	@Override
+	public void undo() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

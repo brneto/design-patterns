@@ -3,8 +3,7 @@ package hometheater.subsystem;
 public class Amplifier {
 
 	public void on() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line Amplifier on");
 	}
 
 	public void setSurroundSound() {

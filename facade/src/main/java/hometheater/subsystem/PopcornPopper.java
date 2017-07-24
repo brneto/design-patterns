@@ -3,18 +3,15 @@ package hometheater.subsystem;
 public class PopcornPopper {
 
 	public void on() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Popcorn Popper on");
 	}
 
 	public void pop() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Popcorn Popper popping popcorn!");
 	}
 
 	public void off() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Popcorn Popper off");
 	}
 
 }

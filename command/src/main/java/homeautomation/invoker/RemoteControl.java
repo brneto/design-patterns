@@ -5,6 +5,7 @@ import homeautomation.command.NoCommand;
 
 public class RemoteControl {
 	Command[] onCommands, offCommands;
+	Command undoCommand;
 
 	public RemoteControl() {
 		onCommands = new Command[7];
@@ -15,6 +16,7 @@ public class RemoteControl {
 			onCommands[i] = noCommand;
 			offCommands[i] = noCommand;
 		}
+		undoCommand = noCommand;
 	}
 
 	public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -24,10 +26,16 @@ public class RemoteControl {
 
 	public void onButtonWasPressed(int slot) {
 		onCommands[slot].execute();
+		undoCommand = onCommands[slot];
 	}
 
 	public void offButtonWasPressed(int slot) {
 		offCommands[slot].execute();
+		undoCommand = offCommands[slot];
+	}
+	
+	public void undoButtonWasPressed() {
+		undoCommand.undo();
 	}
 
 	public String toString() {
@@ -38,6 +46,7 @@ public class RemoteControl {
 					+ onCommands[i].getClass().getName() + " "
 					+ offCommands[i].getClass().getName() + "\n");
 		}
+		stringBuff.append(undoCommand.getClass().getName() + "\n");
 		return stringBuff.toString();
 	}
 

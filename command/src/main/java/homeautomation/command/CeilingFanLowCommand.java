@@ -2,18 +2,18 @@ package homeautomation.command;
 
 import homeautomation.receiver.CeilingFan;
 
-public class CeilingFanOnCommand implements Command {
+public class CeilingFanLowCommand implements Command {
 	CeilingFan ceilingFan;
 	int prevSpeed;
-
-	public CeilingFanOnCommand(CeilingFan ceilingFan) {
+	
+	public CeilingFanLowCommand(CeilingFan ceilingFan) {
 		this.ceilingFan = ceilingFan;
 	}
 
 	@Override
 	public void execute() {
 		prevSpeed = ceilingFan.getSpeed();
-		ceilingFan.medium();
+		ceilingFan.low();
 	}
 
 	@Override

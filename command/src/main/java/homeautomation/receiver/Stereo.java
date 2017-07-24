@@ -1,34 +1,34 @@
 package homeautomation.receiver;
 
 public class Stereo {
-	String room;
+	String location;
 	
-	public Stereo(String room) {
-		this.room = room;
+	public Stereo(String location) {
+		this.location = location;
 	}
 
 	public void on() {
-		System.out.println(room + " stereo is on");
+		System.out.println(location + " stereo is on");
 	}
 
 	public void off() {
-		System.out.println(room + " stereo is off");
+		System.out.println(location + " stereo is off");
 	}
 
 	public void setCd() {
-		System.out.println(room + " stereo is set for CD input");
+		System.out.println(location + " stereo is set for CD input");
 	}
 
 	public void setDvd() {
-		System.out.println(room + " stereo is set for DVD input");
+		System.out.println(location + " stereo is set for DVD input");
 	}
 
 	public void setRadio() {
-		System.out.println(room + " stereo is set for Radio input");
+		System.out.println(location + " stereo is set for Radio input");
 	}
 
 	public void setVolume(int level) {
-		System.out.println(room + " stereo volume set to " + level);
+		System.out.println(location + " stereo volume set to " + level);
 	}
 
 }

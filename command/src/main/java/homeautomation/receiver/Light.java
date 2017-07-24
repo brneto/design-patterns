@@ -1,18 +1,18 @@
 package homeautomation.receiver;
 
 public class Light {
-	private String room;
+	private String location;
 	
-	public Light(String room) {
-		this.room = room;
+	public Light(String location) {
+		this.location = location;
 	}
 
 	public void on() {
-		System.out.println(room + " light is On");
+		System.out.println(location + " light is On");
 	}
 
 	public void off() {
-		System.out.println(room + " light is Off!");
+		System.out.println(location + " light is Off!");
 	}
 
 }

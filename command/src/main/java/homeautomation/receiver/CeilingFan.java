@@ -1,28 +1,36 @@
 package homeautomation.receiver;
 
 public class CeilingFan {
-	private String room;
+	public static final int HIGH = 3;
+	public static final int MEDIUM = 2;
+	public static final int LOW = 1;
+	public static final int OFF = 0;
+	private String location;
 	private int speed;
 
-	public CeilingFan(String room) {
-		this.room = room;
-		this.speed = 0;
+	public CeilingFan(String location) {
+		this.location = location;
+		speed = OFF;
 	}
 	
 	public void high() {
-		System.out.println(room + " ceiling fan is on high");
+		speed = HIGH;
+		System.out.println(location + " ceiling fan is on high");
 	}
 	
 	public void medium() {
-		System.out.println(room + " ceiling fan is on medium");
+		speed = MEDIUM;
+		System.out.println(location + " ceiling fan is on medium");
 	}
 	
 	public void low() {
-		System.out.println(room + " ceiling fan is on low");
+		speed = LOW;
+		System.out.println(location + " ceiling fan is on low");
 	}
 	
 	public void off() {
-		System.out.println("ceiling fan is off");
+		speed = OFF;
+		System.out.println(location + " ceiling fan is off");
 	}
 	
 	public int getSpeed() {

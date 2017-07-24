@@ -16,8 +16,7 @@ public class LightOnCommand implements Command {
 
 	@Override
 	public void undo() {
-		// TODO Auto-generated method stub
-		
+		light.off();
 	}
 
 }

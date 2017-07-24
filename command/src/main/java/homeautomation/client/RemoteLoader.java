@@ -1,4 +1,4 @@
-package homeautomation.requester;
+package homeautomation.client;
 
 import homeautomation.command.CeilingFanHighCommand;
 import homeautomation.command.CeilingFanMediumCommand;

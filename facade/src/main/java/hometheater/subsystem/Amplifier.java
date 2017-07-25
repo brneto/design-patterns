@@ -7,23 +7,19 @@ public class Amplifier {
 	}
 
 	public void setSurroundSound() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line Amplifier surround sound on (5 speakers, 1 subwoofer)");
 	}
 
 	public void setVolume(int i) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line Amplifier setting volume to " + i);
 	}
 
 	public void off() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line Amplifier off");
 	}
 
 	public void setDvd(DvdPlayer dvd) {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line Amplifier setting DVD player to Top-O-Line DVD Player");
 	}
 
 }

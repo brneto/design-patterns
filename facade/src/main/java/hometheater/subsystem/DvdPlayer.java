@@ -1,30 +1,27 @@
 package hometheater.subsystem;
 
 public class DvdPlayer {
+	private String movie;
 
 	public void on() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line DVD Player on");
 	}
 
 	public void play(String movie) {
-		// TODO Auto-generated method stub
-		
+		this.movie = movie;
+		System.out.println("Top-O-Line DVD Player playing “" + movie + "”");
 	}
 
 	public void stop() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line DVD Player stopped “" + movie + "”");
 	}
 
 	public void eject() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line DVD Player eject");
 	}
 
 	public void off() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line DVD Player off");
 	}
 
 }

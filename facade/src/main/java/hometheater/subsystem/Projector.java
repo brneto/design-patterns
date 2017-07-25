@@ -3,18 +3,15 @@ package hometheater.subsystem;
 public class Projector {
 
 	public void on() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line Projector on");
 	}
 
 	public void wideScreenMode() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line Projector in widescreen mode (16x9 aspect ratio)");
 	}
 
 	public void off() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Top-O-Line Projector off");
 	}
 
 }

@@ -1,19 +1,15 @@
 package barista;
 
-public class Tea extends HotBeverage {
-	
-	public void prepareRecipe() {
-		boilWater();
-		steepTeaBag();
-		pourInCup();
-		addLemon();
-	}
+public class Tea extends CaffeineBeverage {
 
-	public void steepTeaBag() {
+	@Override
+	public void brew() {
 		System.out.println("Steeping the tea");
 	}
 
-	public void addLemon() {
+	@Override
+	public void addCondiments() {
 		System.out.println("Adding Lemon");
 	}
+
 }

@@ -1,19 +1,15 @@
 package barista;
 
-public class Coffee extends HotBeverage {
+public class Coffee extends CaffeineBeverage {
 
-	public void prepareRecipe() {
-		boilWater();
-		brewCoffeGrinds();
-		pourInCup();
-		addSugarAndMilk();
-	}
-
-	public void brewCoffeGrinds() {
+	@Override
+	public void brew() {
 		System.out.println("Dripping Coffee through filter");
 	}
 
-	public void addSugarAndMilk() {
+	@Override
+	public void addCondiments() {
 		System.out.println("Adding Sugar and Milk");
 	}
+
 }

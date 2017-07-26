@@ -1,7 +1,8 @@
-package barista;
+package barista.templatemethod;
 
 public abstract class CaffeineBeverage {
-
+	
+	// This method is a Template Method
 	public final void prepareRecipe() {
 		boilWater();
 		brew();
@@ -13,11 +14,11 @@ public abstract class CaffeineBeverage {
 
 	public abstract void addCondiments();
 
-	public final void boilWater() {
+	public void boilWater() {
 		System.out.println("Boiling water");
 	}
 
-	public final void pourInCup() {
+	public void pourInCup() {
 		System.out.println("Pouring into cup");
 	}
 }

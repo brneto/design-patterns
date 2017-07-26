@@ -32,7 +32,7 @@ public class CoffeeWithHook extends CaffeineBeverage {
 	private String getUserInput() {
 		String answer = null;
 
-		System.out.print("Would you like milk and sugar with your coffee (y/n)?");
+		System.out.print("Would you like milk and sugar with your coffee (y/n)? ");
 
 		try (BufferedReader in = new BufferedReader(new InputStreamReader(System.in))) {
 			answer = in.readLine();

@@ -1,6 +1,6 @@
 package barista;
 
-public class Tea {
+public class Tea extends HotBeverage {
 	
 	public void prepareRecipe() {
 		boilWater();
@@ -9,19 +9,11 @@ public class Tea {
 		addLemon();
 	}
 
-	private void boilWater() {
-		System.out.println("Boiling water");
-	}
-
-	private void steepTeaBag() {
+	public void steepTeaBag() {
 		System.out.println("Steeping the tea");
 	}
 
-	private void pourInCup() {
-		System.out.println("Pouring into cup");
-	}
-
-	private void addLemon() {
+	public void addLemon() {
 		System.out.println("Adding Lemon");
 	}
 }

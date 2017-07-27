@@ -18,8 +18,7 @@ public class CoffeeWithHook extends CaffeineBeverage {
 		System.out.println("Adding Sugar and Milk");
 	}
 
-	@Override
-	public boolean customerWantsCondiments() {
+	protected boolean customerWantsCondiments() {
 		String answer = getUserInput();
 
 		if (answer.toLowerCase().startsWith("y")) {

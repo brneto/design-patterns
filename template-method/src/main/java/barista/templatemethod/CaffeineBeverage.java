@@ -23,9 +23,9 @@ public abstract class CaffeineBeverage {
 	public final void pourInCup() {
 		System.out.println("Pouring into cup");
 	}
-	
+
 	// This method is a Hook on Template Method
-	public boolean customerWantsCondiments() {
+	protected boolean customerWantsCondiments() {
 		return true;
 	}
 }

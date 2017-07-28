@@ -1,11 +1,14 @@
 package dinerpancakehouse.aggregate;
 
+import java.util.Iterator;
+
 import dinerpancakehouse.elements.MenuItem;
 
-public class DinerMenu {
-	static final int MAX_ITEMS = 6;
-	int numberOfItems = 0;
-	MenuItem[] menuItems;
+public class DinerMenu implements Iterator<MenuItem>{
+	private static final int MAX_ITEMS = 6;
+	private int numberOfItems = 0;
+	private MenuItem[] menuItems;
+	private int position = 0;
 
 	public DinerMenu() {
 		menuItems = new MenuItem[MAX_ITEMS];
@@ -35,5 +38,16 @@ public class DinerMenu {
 
 	public MenuItem[] getMenuItems() {
 		return menuItems;
+	}
+
+	@Override
+	public boolean hasNext() {
+		return false;
+	}
+
+	@Override
+	public MenuItem next() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -1,11 +1,10 @@
 package dinerpancakehouse.aggregate;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import dinerpancakehouse.elements.MenuItem;
 
-public class PancakeHouseMenu implements Iterator<MenuItem>{
+public class PancakeHouseMenu {
 	private ArrayList<MenuItem> menuItems;
 
 	public PancakeHouseMenu() {
@@ -40,17 +39,5 @@ public class PancakeHouseMenu implements Iterator<MenuItem>{
 	
 	public ArrayList<MenuItem> getMenuItems() {
 		return menuItems;
-	}
-
-	@Override
-	public boolean hasNext() {
-		menuItems
-		return false;
-	}
-
-	@Override
-	public MenuItem next() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }

@@ -1,13 +1,11 @@
 package dinerpancakehouse.client;
 
-import dinerpancakehouse.aggregate.DinerMenu;
-import dinerpancakehouse.aggregate.PancakeHouseMenu;
 import dinerpancakehouse.elements.MenuItem;
 
 public class Waitress {
 	Iterable<MenuItem> pancakeHouseMenu, dinerMenu;
 
-	public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+	public Waitress(Iterable<MenuItem> pancakeHouseMenu, Iterable<MenuItem> dinerMenu) {
 		this.pancakeHouseMenu = pancakeHouseMenu;
 		this.dinerMenu = dinerMenu;
 	}

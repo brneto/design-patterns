@@ -6,7 +6,7 @@ import java.util.Iterator;
 import dinerpancakehouse.elements.MenuItem;
 import dinerpancakehouse.iterator.PancakeHouseMenuIterator;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Iterable<MenuItem> {
 	private ArrayList<MenuItem> menuItems;
 
 	public PancakeHouseMenu() {

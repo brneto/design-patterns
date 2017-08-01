@@ -2,6 +2,7 @@ package dinerpancakehouse.iterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 import dinerpancakehouse.elements.MenuItem;
 
@@ -14,16 +15,18 @@ public class PancakeHouseMenuIterator implements Iterator<MenuItem> {
 	}
 
 	@Override
-	public boolean hasNext() {
-		if (position >= items.size() || items.get(position) == null)
-			return false;
-		return true;
-	}
-
-	@Override
 	public MenuItem next() {
 		if (hasNext())
-		return null;
+			return items.get(position++);
+		else
+			throw new NoSuchElementException();
+	}
+	
+	@Override
+	public boolean hasNext() {
+		if (position >= items.size())
+			return false;
+		return true;
 	}
 
 }

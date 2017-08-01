@@ -14,18 +14,18 @@ public class DinerMenuIterator implements Iterator<MenuItem> {
 	}
 
 	@Override
-	public boolean hasNext() {
-		if(position >= items.length || items[position] == null)
-			return false;
-		return true;
-	}
-
-	@Override
 	public MenuItem next() {
 		if (hasNext())
 			return items[position++];
 		else
 			throw new NoSuchElementException();
+	}
+	
+	@Override
+	public boolean hasNext() {
+		if(position >= items.length || items[position] == null)
+			return false;
+		return true;
 	}
 
 }

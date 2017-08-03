@@ -1,4 +1,4 @@
-package dinerpancakehouse.elements;
+package objectvillemenus.elements;
 
 public class MenuItem {
 	private String name, description;

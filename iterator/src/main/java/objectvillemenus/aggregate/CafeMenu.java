@@ -1,9 +1,9 @@
-package dinerpancakehouse.aggregate;
+package objectvillemenus.aggregate;
 
 import java.util.HashMap;
 import java.util.Iterator;
 
-import dinerpancakehouse.elements.MenuItem;
+import objectvillemenus.elements.MenuItem;
 
 public class CafeMenu implements Menu {
 	HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();

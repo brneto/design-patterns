@@ -1,9 +1,9 @@
-package dinerpancakehouse.iterator;
+package objectvillemenus.iterator;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import dinerpancakehouse.elements.MenuItem;
+import objectvillemenus.elements.MenuItem;
 
 public class DinerMenuIterator implements Iterator<MenuItem> {
 	private MenuItem[] items;

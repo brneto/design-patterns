@@ -1,9 +1,9 @@
-package dinerpancakehouse.aggregate;
+package objectvillemenus.aggregate;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import dinerpancakehouse.elements.MenuItem;
+import objectvillemenus.elements.MenuItem;
 
 public class PancakeHouseMenu implements Menu {
 	private ArrayList<MenuItem> menuItems;

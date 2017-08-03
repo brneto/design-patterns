@@ -1,12 +1,12 @@
-package dinerpancakehouse;
+package objectvillemenus;
 
 import java.util.ArrayList;
 
-import dinerpancakehouse.aggregate.CafeMenu;
-import dinerpancakehouse.aggregate.DinerMenu;
-import dinerpancakehouse.aggregate.Menu;
-import dinerpancakehouse.aggregate.PancakeHouseMenu;
-import dinerpancakehouse.client.Waitress;
+import objectvillemenus.aggregate.CafeMenu;
+import objectvillemenus.aggregate.DinerMenu;
+import objectvillemenus.aggregate.Menu;
+import objectvillemenus.aggregate.PancakeHouseMenu;
+import objectvillemenus.client.Waitress;
 
 public class MenuTestDrive {
 

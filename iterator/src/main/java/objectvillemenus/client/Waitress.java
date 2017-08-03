@@ -1,8 +1,8 @@
-package dinerpancakehouse.client;
+package objectvillemenus.client;
 
 import java.util.ArrayList;
 
-import dinerpancakehouse.aggregate.Menu;
+import objectvillemenus.aggregate.Menu;
 
 public class Waitress {
 	ArrayList<Menu> menus;

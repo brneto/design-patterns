@@ -1,9 +1,9 @@
-package dinerpancakehouse.aggregate;
+package objectvillemenus.aggregate;
 
 import java.util.Iterator;
 
-import dinerpancakehouse.elements.MenuItem;
-import dinerpancakehouse.iterator.DinerMenuIterator;
+import objectvillemenus.elements.MenuItem;
+import objectvillemenus.iterator.DinerMenuIterator;
 
 public class DinerMenu implements Menu {
 	private static final int MAX_ITEMS = 6;

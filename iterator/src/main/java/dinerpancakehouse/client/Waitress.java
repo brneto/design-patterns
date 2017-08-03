@@ -3,11 +3,12 @@ package dinerpancakehouse.client;
 import dinerpancakehouse.elements.MenuItem;
 
 public class Waitress {
-	Iterable<MenuItem> pancakeHouseMenu, dinerMenu;
+	Iterable<MenuItem> pancakeHouseMenu, dinerMenu, cafeMenu;
 
-	public Waitress(Iterable<MenuItem> pancakeHouseMenu, Iterable<MenuItem> dinerMenu) {
+	public Waitress(Iterable<MenuItem> pancakeHouseMenu, Iterable<MenuItem> dinerMenu, Iterable<MenuItem> cafeMenu) {
 		this.pancakeHouseMenu = pancakeHouseMenu;
 		this.dinerMenu = dinerMenu;
+		this.cafeMenu = cafeMenu;
 	}
 
 	public void printMenu() {
@@ -15,6 +16,8 @@ public class Waitress {
 		printMenu(pancakeHouseMenu);
 		System.out.println("\nLUNCH");
 		printMenu(dinerMenu);
+		System.out.println("\nDINNER");
+		printMenu(cafeMenu);
 	}
 
 	private void printMenu(Iterable<MenuItem> Iterable) {

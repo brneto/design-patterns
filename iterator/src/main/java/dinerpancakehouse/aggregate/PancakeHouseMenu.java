@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 import dinerpancakehouse.elements.MenuItem;
 
-public class PancakeHouseMenu implements Iterable<MenuItem> {
+public class PancakeHouseMenu implements Menu {
 	private ArrayList<MenuItem> menuItems;
 
 	public PancakeHouseMenu() {
@@ -35,6 +35,7 @@ public class PancakeHouseMenu implements Iterable<MenuItem> {
 		menuItems.add(menuItem);
 	}
 	
+	@Override
 	public Iterator<MenuItem> iterator() {
 		return menuItems.iterator();
 	}

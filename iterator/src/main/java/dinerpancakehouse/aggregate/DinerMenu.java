@@ -5,7 +5,7 @@ import java.util.Iterator;
 import dinerpancakehouse.elements.MenuItem;
 import dinerpancakehouse.iterator.DinerMenuIterator;
 
-public class DinerMenu implements Iterable<MenuItem> {
+public class DinerMenu implements Menu {
 	private static final int MAX_ITEMS = 6;
 	private int numberOfItems = 0;
 	private MenuItem[] menuItems;
@@ -40,6 +40,7 @@ public class DinerMenu implements Iterable<MenuItem> {
 		}
 	}
 
+	@Override
 	public Iterator<MenuItem> iterator() {
 		return new DinerMenuIterator(menuItems);
 	}

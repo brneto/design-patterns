@@ -1,27 +1,24 @@
 package dinerpancakehouse.client;
 
+import java.util.ArrayList;
+
+import dinerpancakehouse.aggregate.Menu;
 import dinerpancakehouse.elements.MenuItem;
 
 public class Waitress {
-	Iterable<MenuItem> pancakeHouseMenu, dinerMenu, cafeMenu;
+	ArrayList<Menu> menus;
 
-	public Waitress(Iterable<MenuItem> pancakeHouseMenu, Iterable<MenuItem> dinerMenu, Iterable<MenuItem> cafeMenu) {
-		this.pancakeHouseMenu = pancakeHouseMenu;
-		this.dinerMenu = dinerMenu;
-		this.cafeMenu = cafeMenu;
+	public Waitress(ArrayList<Menu> menus) {
+		this.menus = menus;
 	}
 
 	public void printMenu() {
-		System.out.println("MENU\n----\nBREAKFAST");
-		printMenu(pancakeHouseMenu);
-		System.out.println("\nLUNCH");
-		printMenu(dinerMenu);
-		System.out.println("\nDINNER");
-		printMenu(cafeMenu);
+		for (Menu menu : menus)
+			printMenu(menu);
 	}
 
-	private void printMenu(Iterable<MenuItem> Iterable) {
-		for (MenuItem item : Iterable) {
+	private void printMenu(Menu menuItems) {
+		for (MenuItem item : menuItems) {
 			System.out.print(item.getName() + ", ");
 			System.out.print(item.getPrice() + " -- ");
 			System.out.println(item.getDescription());

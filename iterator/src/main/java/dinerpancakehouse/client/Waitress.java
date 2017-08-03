@@ -3,7 +3,6 @@ package dinerpancakehouse.client;
 import java.util.ArrayList;
 
 import dinerpancakehouse.aggregate.Menu;
-import dinerpancakehouse.elements.MenuItem;
 
 public class Waitress {
 	ArrayList<Menu> menus;
@@ -18,10 +17,9 @@ public class Waitress {
 	}
 
 	private void printMenu(Menu menuItems) {
-		for (MenuItem item : menuItems) {
-			System.out.print(item.getName() + ", ");
-			System.out.print(item.getPrice() + " -- ");
-			System.out.println(item.getDescription());
-		}
+		menuItems.forEach(e -> System.out.println(
+								e.getName() + ", " + 
+								e.getPrice() + " -- " + 
+								e.getDescription()));
 	}
 }

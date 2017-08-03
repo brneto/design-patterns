@@ -12,8 +12,7 @@ public class Waitress {
 	}
 
 	public void printMenu() {
-		for (Menu menu : menus)
-			printMenu(menu);
+		menus.forEach(this::printMenu);
 	}
 
 	private void printMenu(Menu menuItems) {

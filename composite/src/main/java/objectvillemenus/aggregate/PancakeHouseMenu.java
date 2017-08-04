@@ -3,7 +3,8 @@ package objectvillemenus.aggregate;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import objectvillemenus.elements.MenuItem;
+import objectvillemenus.composite.Menu;
+import objectvillemenus.leaf.MenuItem;
 
 public class PancakeHouseMenu implements Menu {
 	private ArrayList<MenuItem> menuItems;

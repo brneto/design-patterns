@@ -2,7 +2,7 @@ package objectvillemenus.client;
 
 import java.util.ArrayList;
 
-import objectvillemenus.aggregate.Menu;
+import objectvillemenus.composite.Menu;
 
 public class Waitress {
 	ArrayList<Menu> menus;

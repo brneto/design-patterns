@@ -3,7 +3,7 @@ package objectvillemenus.iterator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import objectvillemenus.elements.MenuItem;
+import objectvillemenus.leaf.MenuItem;
 
 public class DinerMenuIterator implements Iterator<MenuItem> {
 	private MenuItem[] items;

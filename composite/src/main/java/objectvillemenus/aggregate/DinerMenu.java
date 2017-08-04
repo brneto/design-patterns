@@ -2,8 +2,9 @@ package objectvillemenus.aggregate;
 
 import java.util.Iterator;
 
-import objectvillemenus.elements.MenuItem;
+import objectvillemenus.composite.Menu;
 import objectvillemenus.iterator.DinerMenuIterator;
+import objectvillemenus.leaf.MenuItem;
 
 public class DinerMenu implements Menu {
 	private static final int MAX_ITEMS = 6;

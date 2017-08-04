@@ -3,7 +3,8 @@ package objectvillemenus.aggregate;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import objectvillemenus.elements.MenuItem;
+import objectvillemenus.composite.Menu;
+import objectvillemenus.leaf.MenuItem;
 
 public class CafeMenu implements Menu {
 	HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();

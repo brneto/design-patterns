@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import objectvillemenus.aggregate.CafeMenu;
 import objectvillemenus.aggregate.DinerMenu;
-import objectvillemenus.aggregate.Menu;
 import objectvillemenus.aggregate.PancakeHouseMenu;
 import objectvillemenus.client.Waitress;
+import objectvillemenus.composite.Menu;
 
 public class MenuTestDrive {
 

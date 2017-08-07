@@ -1,24 +1,16 @@
 package objectvillemenus.client;
 
-import java.util.ArrayList;
-
-import objectvillemenus.composite.Menu;
+import objectvillemenus.component.MenuComponent;
 
 public class Waitress {
-	ArrayList<Menu> menus;
+	MenuComponent allMenus;
 
-	public Waitress(ArrayList<Menu> menus) {
-		this.menus = menus;
+	public Waitress(MenuComponent allMenus) {
+		this.allMenus = allMenus;
 	}
 
 	public void printMenu() {
-		menus.forEach(this::printMenu);
+		allMenus.print();
 	}
 
-	private void printMenu(Menu menuItems) {
-		menuItems.forEach(e -> System.out.println(
-								e.getName() + ", " + 
-								e.getPrice() + " -- " + 
-								e.getDescription()));
-	}
 }

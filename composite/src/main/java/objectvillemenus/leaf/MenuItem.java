@@ -41,6 +41,6 @@ public class MenuItem implements MenuComponent {
 			System.out.print("(v)");
 		}
 		System.out.println(", " + getPrice());
-		System.out.println(" -- " + getDescription());
+		System.out.println("    -- " + getDescription());
 	}
 }

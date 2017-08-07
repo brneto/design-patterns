@@ -1,10 +1,13 @@
 package objectvillemenus.composite;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import objectvillemenus.component.MenuComponent;
+import objectvillemenus.composite.iterator.CompositeIterator;
 
 public class Menu implements MenuComponent {
+	private Iterator<MenuComponent> iterator;
 	private ArrayList<MenuComponent> menuComponents = new ArrayList<MenuComponent>();
 	private String name, description;
 
@@ -45,6 +48,14 @@ public class Menu implements MenuComponent {
 		System.out.println("---------------------");
 		
 		menuComponents.forEach(e -> e.print());
+	}
+
+	@Override
+	public Iterator<MenuComponent> iterator() {
+		if (iterator == null) {
+			iterator = new CompositeIterator(menuComponents);
+		}
+		return iterator;
 	}
 
 }

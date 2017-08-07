@@ -1,6 +1,9 @@
 package objectvillemenus.leaf;
 
+import java.util.Iterator;
+
 import objectvillemenus.component.MenuComponent;
+import objectvillemenus.composite.iterator.NullIterator;
 
 public class MenuItem implements MenuComponent {
 	private String name, description;
@@ -42,5 +45,10 @@ public class MenuItem implements MenuComponent {
 		}
 		System.out.println(", " + getPrice());
 		System.out.println("    -- " + getDescription());
+	}
+
+	@Override
+	public Iterator<MenuComponent> iterator() {
+		return new NullIterator();
 	}
 }

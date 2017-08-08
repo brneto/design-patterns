@@ -28,7 +28,7 @@ public class Menu implements MenuComponent {
 	
 	@Override
 	public MenuComponent getChild(int i) {
-		return (MenuComponent)menuComponents.get(i);
+		return menuComponents.get(i);
 	}
 	
 	@Override

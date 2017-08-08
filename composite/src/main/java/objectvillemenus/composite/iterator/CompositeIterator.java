@@ -1,9 +1,11 @@
 package objectvillemenus.composite.iterator;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Stack;
 
 import objectvillemenus.component.MenuComponent;
+import objectvillemenus.composite.Menu;
 
 public class CompositeIterator implements Iterator<MenuComponent> {
 	Stack<Iterable<MenuComponent>> stack = new Stack<Iterable<MenuComponent>>();
@@ -13,15 +15,30 @@ public class CompositeIterator implements Iterator<MenuComponent> {
 	}
 
 	@Override
-	public boolean hasNext() {
-		
-		return false;
+	public MenuComponent next() {
+		if (hasNext()) {
+			MenuComponent component = stack.peek().iterator().next();
+			if (component instanceof Menu) {
+				stack.push(component);
+			}
+			return component;
+		} else {
+			throw new NoSuchElementException();
+		}
 	}
 
 	@Override
-	public MenuComponent next() {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean hasNext() {
+		if (stack.empty()) {
+			return false;
+		} else {
+			if (!stack.peek().iterator().hasNext()) {
+				stack.pop();
+				return hasNext();
+			} else {
+				return true;
+			}
+		}
 	}
 
 }

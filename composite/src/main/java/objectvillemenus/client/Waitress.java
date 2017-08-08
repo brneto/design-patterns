@@ -13,4 +13,15 @@ public class Waitress {
 		allMenus.print();
 	}
 
+	public void printVegetarianMenu() {
+		System.out.println("\nVEGETARIAN MENU\n----");
+		for (MenuComponent component : allMenus) {
+			try {
+				if (component.isVegetarian()) {
+					component.print();
+				}
+			} catch (UnsupportedOperationException e) {}
+		}
+	}
+
 }

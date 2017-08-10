@@ -11,8 +11,9 @@ public class GumballMachine {
 	
 	public GumballMachine(int count) {
 		this.count = count;
-		if (count > 0)
+		if (count > 0) {
 			state = NO_QUARTER;
+		}
 	}
 
 	public void insertQuarter() {
@@ -35,12 +36,95 @@ public class GumballMachine {
 	
 	public void ejectQuarter() {
 		switch (state) {
-		
+		case HAS_QUARTER:
+			System.out.println("Quarter returned");
+			state = NO_QUARTER;
+			break;
+		case NO_QUARTER:
+			System.out.println("You haven't inserted a quarter");
+			break;
+		case SOLD:
+			System.out.println("Sorry, you already turned the crank");
+			break;
+		case SOLD_OUT:
+			System.out.println("You can't eject, you haven't inserted a quarter yet");
+			break;
+		}
+	}
+	
+	public void turnCrank() {
+		switch (state) {
+		case SOLD:
+			System.out.println("Turning twice doesn’t get you another gumball!");
+			break;
+		case NO_QUARTER:
+			System.out.println("You turned but there’s no quarter");
+			break;
+		case SOLD_OUT:
+			System.out.println("You turned, but there are no gumballsYou turned, but there are no gumballs");
+			break;
+		case HAS_QUARTER:
+			System.out.println("You turned...");
+			state = SOLD;
+			dispense();
+			break;
 		}
 	}
 
-	private void print(String value) {
-		System.out.println(value);
+	public void dispense() {
+		switch (state) {
+		case SOLD:
+			 System.out.println("A gumball comes rolling out the slot");
+			 count--;
+			 if (count <= 0) {
+				 System.out.println("Oops, out of gumballs!");
+				 state = SOLD_OUT;
+			 } else {
+				 state = NO_QUARTER;
+			 }
+			 break;
+		case NO_QUARTER:
+			System.out.println("You need to pay first");
+			break;
+		case SOLD_OUT:
+			System.out.println("No gumball dispensed");
+			break;
+		case HAS_QUARTER:
+			System.out.println("No gumball dispensed");
+			break;
+		}
+	}
+	
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer();
+		result.append("\nMighty Gumball, Inc.");
+		result.append("\nJava-enabled Standing Gumball Model #2004\n");
+		result.append("Inventory: " + count + " gumball");
+		
+		if (count != 1) {
+			result.append("s");
+		}
+		
+		result.append("\nMachine is ");
+		
+		switch (state) {
+		case SOLD_OUT:
+			result.append("sold out");
+			break;
+		case NO_QUARTER:
+			result.append("waiting for quarter");
+			break;
+		case HAS_QUARTER:
+			result.append("waiting for turn of crank");
+			break;
+		case SOLD:
+			result.append("delivering a gumball");
+			break;
+		}
+		result.append("\n");
+		
+		return result.toString();
 	}
 
 }

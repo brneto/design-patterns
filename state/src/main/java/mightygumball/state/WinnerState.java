@@ -1,9 +1,12 @@
 package mightygumball.state;
 
-public class WinnerState implements State {
+import mightygumball.GumballMachine;
 
-	public WinnerState() {
-		// TODO Auto-generated constructor stub
+public class WinnerState implements State {
+	GumballMachine gumballMachine;
+
+	public WinnerState(GumballMachine gumballMachine) {
+		this.gumballMachine = gumballMachine;
 	}
 
 	@Override

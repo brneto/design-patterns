@@ -1,9 +1,12 @@
 package mightygumball.state;
 
-public class SoldOutState implements State {
+import mightygumball.GumballMachine;
 
-	public SoldOutState() {
-		// TODO Auto-generated constructor stub
+public class SoldOutState implements State {
+	GumballMachine gumballMachine;
+	
+	public SoldOutState(GumballMachine gumballMachine) {
+		this.gumballMachine = gumballMachine;
 	}
 
 	@Override
@@ -28,6 +31,11 @@ public class SoldOutState implements State {
 	public void dispense() {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	@Override
+	public String toString() {
+		return "sold out";
 	}
 
 }

@@ -1,16 +1,13 @@
-package mightygumball;
+package mightygumball.context;
 
-import mightygumball.state.HasQuarterState;
-import mightygumball.state.NoQuarterState;
-import mightygumball.state.SoldOutState;
-import mightygumball.state.SoldState;
 import mightygumball.state.State;
+import mightygumball.state.concrete.HasQuarterState;
+import mightygumball.state.concrete.NoQuarterState;
+import mightygumball.state.concrete.SoldOutState;
+import mightygumball.state.concrete.SoldState;
 
 public class GumballMachine {
-	State soldOutState;
-	State noQuarterState;
-	State hasQuarterState;
-	State soldState;
+	State soldOutState, noQuarterState, hasQuarterState, soldState;
 
 	State state = soldOutState;
 	int count = 0;
@@ -20,6 +17,7 @@ public class GumballMachine {
 		noQuarterState = new NoQuarterState(this);
 		hasQuarterState = new HasQuarterState(this);
 		soldState = new SoldState(this);
+		
 	
 		this.count = numberGumballs;
 		if (numberGumballs > 0) {
@@ -37,7 +35,6 @@ public class GumballMachine {
 	
 	public void turnCrank() {
 		state.turnCrank();
-		state.dispense();
 	}
 	
 	public void setState(State state) {

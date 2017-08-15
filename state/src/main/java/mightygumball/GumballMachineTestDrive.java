@@ -1,5 +1,7 @@
 package mightygumball;
 
+import mightygumball.context.GumballMachine;
+
 public class GumballMachineTestDrive {
 
 	public static void main(String[] args) {

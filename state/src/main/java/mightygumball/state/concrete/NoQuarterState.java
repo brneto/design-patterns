@@ -1,6 +1,7 @@
-package mightygumball.state;
+package mightygumball.state.concrete;
 
-import mightygumball.GumballMachine;
+import mightygumball.context.GumballMachine;
+import mightygumball.state.State;
 
 public class NoQuarterState implements State {
 	GumballMachine gumballMachine;
@@ -23,10 +24,10 @@ public class NoQuarterState implements State {
 	@Override
 	public void turnCrank() {
 		System.out.println("You turned, but there’s no quarter");
+		dispense();
 	}
 
-	@Override
-	public void dispense() {
+	private void dispense() {
 		System.out.println("You need to pay first");
 	}
 	

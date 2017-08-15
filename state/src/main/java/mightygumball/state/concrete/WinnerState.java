@@ -1,6 +1,7 @@
-package mightygumball.state;
+package mightygumball.state.concrete;
 
-import mightygumball.GumballMachine;
+import mightygumball.context.GumballMachine;
+import mightygumball.state.State;
 
 public class WinnerState implements State {
 	GumballMachine gumballMachine;
@@ -24,11 +25,10 @@ public class WinnerState implements State {
 	@Override
 	public void turnCrank() {
 		// TODO Auto-generated method stub
-
+		dispense();
 	}
 
-	@Override
-	public void dispense() {
+	private void dispense() {
 		// TODO Auto-generated method stub
 
 	}

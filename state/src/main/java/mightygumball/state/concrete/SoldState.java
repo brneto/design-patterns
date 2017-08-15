@@ -22,11 +22,11 @@ public class SoldState implements State {
 
 	@Override
 	public void turnCrank() {
-		System.out.println("Turning twice doesn’t get you another gumball!");
-		dispense();
+		System.out.println("Turning twice doesn’t get you another gumball!");		
 	}
 
-	private void dispense() {
+	@Override
+	public void dispense() {
 		gumballMachine.releaseBall();
 		if (gumballMachine.getCount() > 0) {
 			gumballMachine.setState(gumballMachine.getNoQuarterState());
@@ -34,6 +34,11 @@ public class SoldState implements State {
 			System.out.println("Oops, out of gumballs!");
 			gumballMachine.setState(gumballMachine.getSoldOutState());
 		}
+	}
+	
+	@Override
+	public void refill() {
+
 	}
 
 	@Override

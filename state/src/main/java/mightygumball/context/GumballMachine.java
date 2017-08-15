@@ -5,9 +5,10 @@ import mightygumball.state.concrete.HasQuarterState;
 import mightygumball.state.concrete.NoQuarterState;
 import mightygumball.state.concrete.SoldOutState;
 import mightygumball.state.concrete.SoldState;
+import mightygumball.state.concrete.WinnerState;
 
 public class GumballMachine {
-	State soldOutState, noQuarterState, hasQuarterState, soldState;
+	State soldOutState, noQuarterState, hasQuarterState, soldState, winnerState;
 
 	State state = soldOutState;
 	int count = 0;
@@ -17,7 +18,7 @@ public class GumballMachine {
 		noQuarterState = new NoQuarterState(this);
 		hasQuarterState = new HasQuarterState(this);
 		soldState = new SoldState(this);
-		
+		winnerState = new WinnerState(this);
 	
 		this.count = numberGumballs;
 		if (numberGumballs > 0) {
@@ -35,6 +36,7 @@ public class GumballMachine {
 	
 	public void turnCrank() {
 		state.turnCrank();
+		state.dispense();
 	}
 	
 	public void setState(State state) {
@@ -64,8 +66,18 @@ public class GumballMachine {
 		return soldOutState;
 	}
 	
+	public State getWinnerState() {
+		return winnerState;
+	}
+	
 	public int getCount() {
 		return count;
+	}
+	
+	public void refill(int count) {
+		this.count += count;
+		System.out.println("The gumball machine was just refilled; it's new count is: " + this.count);
+		state.refill();
 	}
 	
 	@Override

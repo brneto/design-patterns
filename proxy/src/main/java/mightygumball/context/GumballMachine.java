@@ -27,6 +27,10 @@ public class GumballMachine {
 		
 		this.location = location;
 	}
+	
+	public String getLocation() {
+		return location;
+	}
 
 	public void insertQuarter() {
 		state.insertQuarter();
@@ -96,6 +100,10 @@ public class GumballMachine {
 		result.append("\nMachine is " + state + "\n");
 		
 		return result.toString();
+	}
+
+	public State getState() {
+		return state;
 	}
 
 }

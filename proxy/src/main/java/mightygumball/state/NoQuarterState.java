@@ -1,10 +1,11 @@
-package mightygumball.state.concrete;
+package mightygumball.state;
 
-import mightygumball.context.GumballMachine;
-import mightygumball.state.State;
+import mightygumball.service.GumballMachine;
 
 public class NoQuarterState implements State {
-	GumballMachine gumballMachine;
+	private static final long serialVersionUID = -5372315877491892651L;
+	
+	transient GumballMachine gumballMachine;
 
 	public NoQuarterState(GumballMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;

@@ -1,10 +1,11 @@
-package mightygumball.state.concrete;
+package mightygumball.state;
 
-import mightygumball.context.GumballMachine;
-import mightygumball.state.State;
+import mightygumball.service.GumballMachine;
 
 public class WinnerState implements State {
-	GumballMachine gumballMachine;
+	private static final long serialVersionUID = 9143793470767194030L;
+	
+	transient GumballMachine gumballMachine;
 
 	public WinnerState(GumballMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;

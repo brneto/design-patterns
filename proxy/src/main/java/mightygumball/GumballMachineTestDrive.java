@@ -1,27 +1,37 @@
 package mightygumball;
 
-import mightygumball.context.GumballMachine;
-import mightygumball.monitor.GumballMonitor;
+import java.rmi.Naming;
+
+import mightygumball.client.GumballMonitor;
+import mightygumball.remote.GumballMachineRemote;
 
 public class GumballMachineTestDrive {
 
 	public static void main(String[] args) {
-		String[] option = {"Seattle", "112"};
+		String[] option = {"seattle.mightygumball.com", "250"};
 		args = option;
 		
-		int count = 0;
+		String [] location = {"rmi://santafe.mightygumball.com/gumballmachine",
+							  "rmi://boulder.mightygumball.com/gumballmachine",
+							  "rmi://seattle.mightygumball.com/gumballmachine"};
 		
-		if (args.length < 2) {
-			System.out.println("GumballMachine <name> <inventory>");
-			System.exit(1);
+		GumballMonitor[] monitor = new GumballMonitor[location.length];
+		
+		for (int i=0; i < location.length; i++) {
+			try {
+				GumballMachineRemote machine =
+						(GumballMachineRemote) Naming.lookup(location[i]);
+				monitor[i] = new GumballMonitor(machine);
+				
+				System.out.println(monitor[i]);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
-		count = Integer.parseInt(args[1]);
-		GumballMachine gumballMachine = new GumballMachine(args[0], count);
-		
-		GumballMonitor monitor = new GumballMonitor(gumballMachine);
-		
-		monitor.report();
+		for (int i=0; i < monitor.length; i++) {
+			monitor[i].report();
+		}
 	}
 
 }

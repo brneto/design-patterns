@@ -1,19 +1,26 @@
-package mightygumball.context;
+package mightygumball.service;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+import mightygumball.remote.GumballMachineRemote;
+import mightygumball.state.HasQuarterState;
+import mightygumball.state.NoQuarterState;
+import mightygumball.state.SoldOutState;
+import mightygumball.state.SoldState;
 import mightygumball.state.State;
-import mightygumball.state.concrete.HasQuarterState;
-import mightygumball.state.concrete.NoQuarterState;
-import mightygumball.state.concrete.SoldOutState;
-import mightygumball.state.concrete.SoldState;
-import mightygumball.state.concrete.WinnerState;
+import mightygumball.state.WinnerState;
 
-public class GumballMachine {
+public class GumballMachine 
+		extends UnicastRemoteObject implements GumballMachineRemote {
+	private static final long serialVersionUID = 5599259677971363472L;
+	
 	State soldOutState, noQuarterState, hasQuarterState, soldState, winnerState;
 	State state = soldOutState;
 	int count = 0;
 	String location;
 
-	public GumballMachine(String location, int numberGumballs) {
+	public GumballMachine(String location, int numberGumballs) throws RemoteException {
 		soldOutState = new SoldOutState(this);
 		noQuarterState = new NoQuarterState(this);
 		hasQuarterState = new HasQuarterState(this);

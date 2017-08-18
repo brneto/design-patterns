@@ -1,13 +1,14 @@
-package mightygumball.state.concrete;
+package mightygumball.state;
 
 import java.util.Random;
 
-import mightygumball.context.GumballMachine;
-import mightygumball.state.State;
+import mightygumball.service.GumballMachine;
 
 public class HasQuarterState implements State {
+	private static final long serialVersionUID = -3587306558428468917L;
+	
+	transient GumballMachine gumballMachine;
 	Random randomWinner = new Random(System.currentTimeMillis());
-	GumballMachine gumballMachine;
 
 	public HasQuarterState(GumballMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;

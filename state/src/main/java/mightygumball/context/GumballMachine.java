@@ -1,11 +1,11 @@
 package mightygumball.context;
 
+import mightygumball.state.HasQuarterState;
+import mightygumball.state.NoQuarterState;
+import mightygumball.state.SoldOutState;
+import mightygumball.state.SoldState;
 import mightygumball.state.State;
-import mightygumball.state.concrete.HasQuarterState;
-import mightygumball.state.concrete.NoQuarterState;
-import mightygumball.state.concrete.SoldOutState;
-import mightygumball.state.concrete.SoldState;
-import mightygumball.state.concrete.WinnerState;
+import mightygumball.state.WinnerState;
 
 public class GumballMachine {
 	State soldOutState, noQuarterState, hasQuarterState, soldState, winnerState;

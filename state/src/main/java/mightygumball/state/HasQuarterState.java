@@ -1,9 +1,8 @@
-package mightygumball.state.concrete;
+package mightygumball.state;
 
 import java.util.Random;
 
 import mightygumball.context.GumballMachine;
-import mightygumball.state.State;
 
 public class HasQuarterState implements State {
 	Random randomWinner = new Random(System.currentTimeMillis());

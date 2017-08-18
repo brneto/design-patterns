@@ -1,7 +1,6 @@
-package mightygumball.state.concrete;
+package mightygumball.state;
 
 import mightygumball.context.GumballMachine;
-import mightygumball.state.State;
 
 public class WinnerState implements State {
 	GumballMachine gumballMachine;

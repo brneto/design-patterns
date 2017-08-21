@@ -23,7 +23,7 @@ public class DuckSimulator {
 		Quackable rubberDuck = duckFactory.createRubberDuck();
 		Quackable gooseDuck = new GooseAdapter(new Goose());
 
-		System.out.println("\nDuck Simulator: With Adapter and Decorator");
+		System.out.println("\nDuck Simulator: With Adapter, Decorator and Abstract Factory");
 
 		simulate(mallardDuck);
 		simulate(redheadDuck);
@@ -31,7 +31,7 @@ public class DuckSimulator {
 		simulate(rubberDuck);
 		simulate(gooseDuck);
 		
-		System.out.println("The ducks quacked " + QuackCounter.getQuacks() + " times");
+		System.out.println(QuackCounter.getQuacks() + " quacks were counted");
 	}
 
 	void simulate(Quackable duck) {

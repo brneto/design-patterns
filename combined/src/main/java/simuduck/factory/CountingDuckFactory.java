@@ -9,10 +9,6 @@ import simuduck.decorator.QuackCounter;
 
 public class CountingDuckFactory extends AbstractDuckFactory {
 
-	public CountingDuckFactory() {
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public Quackable createMallardDuck() {
 		return new QuackCounter(new MallardDuck());

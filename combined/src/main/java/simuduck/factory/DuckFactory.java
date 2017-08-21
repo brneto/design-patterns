@@ -8,10 +8,6 @@ import simuduck.client.RubberDuck;
 
 public class DuckFactory extends AbstractDuckFactory {
 
-	public DuckFactory() {
-		// TODO Auto-generated constructor stub
-	}
-
 	@Override
 	public Quackable createMallardDuck() {
 		return new MallardDuck();

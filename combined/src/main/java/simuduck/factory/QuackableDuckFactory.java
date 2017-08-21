@@ -5,28 +5,27 @@ import simuduck.client.DuckCall;
 import simuduck.client.MallardDuck;
 import simuduck.client.RedheadDuck;
 import simuduck.client.RubberDuck;
-import simuduck.decorator.QuackCounter;
 
-public class CountingDuckFactory implements DuckFactory {
+public class QuackableDuckFactory implements DuckFactory {
 
 	@Override
 	public Quackable createMallardDuck() {
-		return new QuackCounter(new MallardDuck());
+		return new MallardDuck();
 	}
 
 	@Override
 	public Quackable createRedheadDuck() {
-		return new QuackCounter(new RedheadDuck());
+		return new RedheadDuck();
 	}
 
 	@Override
 	public Quackable createDuckCall() {
-		return new QuackCounter(new DuckCall());
+		return new DuckCall();
 	}
 
 	@Override
 	public Quackable createRubberDuck() {
-		return new QuackCounter(new RubberDuck());
+		return new RubberDuck();
 	}
 
 }

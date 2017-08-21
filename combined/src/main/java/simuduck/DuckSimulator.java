@@ -1,27 +1,26 @@
 package simuduck;
 
-import simuduck.adapter.GooseAdapter;
 import simuduck.behavior.Quackable;
-import simuduck.client.Goose;
 import simuduck.decorator.QuackCounter;
-import simuduck.factory.AbstractDuckFactory;
+import simuduck.decorator.factory.AbstractGooseDuckFactory;
+import simuduck.decorator.factory.GooseDuckFactory;
 import simuduck.factory.CountingDuckFactory;
 
 public class DuckSimulator {
 
 	public static void main(String[] args) {
 		DuckSimulator simulator = new DuckSimulator();
-		AbstractDuckFactory duckFactory = new CountingDuckFactory();
+		AbstractGooseDuckFactory gooseDuckFactory = new GooseDuckFactory(new CountingDuckFactory());
 		
-		simulator.simulate(duckFactory);
+		simulator.simulate(gooseDuckFactory);
 	}
 
-	void simulate(AbstractDuckFactory duckFactory) {
-		Quackable mallardDuck = duckFactory.createMallardDuck();
-		Quackable redheadDuck = duckFactory.createRedheadDuck();
-		Quackable duckCall = duckFactory.createDuckCall();
-		Quackable rubberDuck = duckFactory.createRubberDuck();
-		Quackable gooseDuck = new GooseAdapter(new Goose());
+	void simulate(AbstractGooseDuckFactory gooseDuckFactory) {
+		Quackable mallardDuck = gooseDuckFactory.createMallardDuck();
+		Quackable redheadDuck = gooseDuckFactory.createRedheadDuck();
+		Quackable duckCall = gooseDuckFactory.createDuckCall();
+		Quackable rubberDuck = gooseDuckFactory.createRubberDuck();
+		Quackable gooseDuck = gooseDuckFactory.createGooseDuck();
 
 		System.out.println("\nDuck Simulator: With Adapter, Decorator and Abstract Factory");
 

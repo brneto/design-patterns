@@ -1,6 +1,7 @@
 package simuduck;
 
 import simuduck.behavior.Quackable;
+import simuduck.composite.Flock;
 import simuduck.decorator.QuackCounter;
 import simuduck.decorator.factory.AbstractGooseDuckFactory;
 import simuduck.decorator.factory.GooseDuckFactory;
@@ -16,21 +17,40 @@ public class DuckSimulator {
 	}
 
 	void simulate(AbstractGooseDuckFactory gooseDuckFactory) {
-		Quackable mallardDuck = gooseDuckFactory.createMallardDuck();
 		Quackable redheadDuck = gooseDuckFactory.createRedheadDuck();
 		Quackable duckCall = gooseDuckFactory.createDuckCall();
 		Quackable rubberDuck = gooseDuckFactory.createRubberDuck();
 		Quackable gooseDuck = gooseDuckFactory.createGooseDuck();
+		System.out.println("\nDuck Simulator: With Adapter, Decorator, Abstract Factory and Composite");
 
-		System.out.println("\nDuck Simulator: With Adapter, Decorator and Abstract Factory");
-
-		simulate(mallardDuck);
-		simulate(redheadDuck);
-		simulate(duckCall);
-		simulate(rubberDuck);
-		simulate(gooseDuck);
+		Flock flockOfDucks = new Flock();
+		flockOfDucks.add(redheadDuck);
+		flockOfDucks.add(duckCall);
+		flockOfDucks.add(rubberDuck);
+		flockOfDucks.add(gooseDuck);
 		
-		System.out.println(QuackCounter.getQuacks() + " quacks were counted");
+		Flock flockOfMallards = new Flock();
+		Quackable mallardOne = gooseDuckFactory.createMallardDuck();
+		Quackable mallardTwo = gooseDuckFactory.createMallardDuck();
+		Quackable mallardThree = gooseDuckFactory.createMallardDuck();
+		Quackable mallardFour = gooseDuckFactory.createMallardDuck();
+		
+		flockOfMallards.add(mallardOne);
+		flockOfMallards.add(mallardTwo);
+		flockOfMallards.add(mallardThree);
+		flockOfMallards.add(mallardFour);
+		
+		flockOfDucks.add(flockOfMallards);
+
+		System.out.println("\nDuck Simulator: Whole Flock Simulation");
+		simulate(flockOfDucks);
+		
+		System.out.println("\nDuck Simulator: Mallard Flock Simulation");
+		simulate(flockOfMallards);
+		
+		System.out.println("\nThe ducks quacked " +
+							QuackCounter.getQuacks() +
+							" times");
 	}
 
 	void simulate(Quackable duck) {

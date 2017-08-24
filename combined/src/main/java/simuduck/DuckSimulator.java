@@ -6,6 +6,7 @@ import simuduck.decorator.QuackCounter;
 import simuduck.decorator.factory.AbstractGooseDuckFactory;
 import simuduck.decorator.factory.GooseDuckFactory;
 import simuduck.factory.CountingDuckFactory;
+import simuduck.observer.Quackologist;
 
 public class DuckSimulator {
 
@@ -21,7 +22,8 @@ public class DuckSimulator {
 		Quackable duckCall = gooseDuckFactory.createDuckCall();
 		Quackable rubberDuck = gooseDuckFactory.createRubberDuck();
 		Quackable gooseDuck = gooseDuckFactory.createGooseDuck();
-		System.out.println("\nDuck Simulator: With Adapter, Decorator, Abstract Factory and Composite");
+		System.out.println("\nDuck Simulator: With Adapter, Decorator, "
+				+ "Abstract Factory, Composite and Observer");
 
 		Flock flockOfDucks = new Flock();
 		flockOfDucks.add(redheadDuck);
@@ -41,12 +43,12 @@ public class DuckSimulator {
 		flockOfMallards.add(mallardFour);
 		
 		flockOfDucks.add(flockOfMallards);
-
-		System.out.println("\nDuck Simulator: Whole Flock Simulation");
-		simulate(flockOfDucks);
 		
-		System.out.println("\nDuck Simulator: Mallard Flock Simulation");
-		simulate(flockOfMallards);
+		Quackologist quackologist = new Quackologist();
+		flockOfDucks.registerObserver(quackologist);
+		
+		System.out.println("\nDuck Simulator: Whole Flock Simulation with Observer");
+		simulate(flockOfDucks);
 		
 		System.out.println("\nThe ducks quacked " +
 							QuackCounter.getQuacks() +

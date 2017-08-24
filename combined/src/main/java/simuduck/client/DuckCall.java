@@ -27,5 +27,10 @@ public class DuckCall implements Quackable {
 	public void notifyObservers() {
 		observable.notifyObservers();;
 	}
+	
+	@Override
+	public String toString() {
+		return "Duck Call";
+	}
 
 }

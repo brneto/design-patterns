@@ -1,6 +1,7 @@
 package simuduck.decorator;
 
 import simuduck.behavior.Quackable;
+import simuduck.observer.Observer;
 
 public class QuackCounter implements Quackable {
 	private Quackable duck;
@@ -18,6 +19,16 @@ public class QuackCounter implements Quackable {
 	
 	public static int getQuacks() {
 		return numberOfQuacks;
+	}
+
+	@Override
+	public void registerObserver(Observer observer) {
+		duck.registerObserver(observer);
+	}
+
+	@Override
+	public void notifyObservers() {
+		duck.notifyObservers();
 	}
 
 }

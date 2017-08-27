@@ -12,8 +12,8 @@ import javax.sound.midi.Sequencer;
 import javax.sound.midi.ShortMessage;
 import javax.sound.midi.Track;
 
-import djview.observer.BPMObserver;
-import djview.observer.BeatObserver;
+import djview.model.observer.BPMObserver;
+import djview.model.observer.BeatObserver;
 
 public class BeatModel implements BeatModelInterface, MetaEventListener {
 	Sequencer sequencer;

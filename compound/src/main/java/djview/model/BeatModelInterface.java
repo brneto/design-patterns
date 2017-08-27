@@ -1,7 +1,7 @@
 package djview.model;
 
-import djview.observer.BPMObserver;
-import djview.observer.BeatObserver;
+import djview.model.observer.BPMObserver;
+import djview.model.observer.BeatObserver;
 
 public interface BeatModelInterface {
 	void initialize();

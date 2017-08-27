@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import djview.control.ControllerInterface;
+import djview.controller.ControllerInterface;
 import djview.model.BeatModelInterface;
 import djview.model.observer.BPMObserver;
 import djview.model.observer.BeatObserver;

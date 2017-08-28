@@ -57,11 +57,11 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 		notifyBeatObservers();
 	}
 	
-	private void notifyBPMObservers() {
+	public void notifyBPMObservers() {
 		bpmObservers.forEach(BPMObserver::updateBPM);
 	}
 
-	private void notifyBeatObservers() {
+	public void notifyBeatObservers() {
 		beatObservers.forEach(BeatObserver::updateBeat);
 	}
 

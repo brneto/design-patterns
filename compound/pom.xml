@@ -4,8 +4,10 @@
 
     <groupId>headfirst</groupId>
     <artifactId>compound</artifactId>
+    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <name>compound Maven Webapp</name>
+    <url>http://maven.apache.org</url>
 
 
     <build>
@@ -24,6 +26,7 @@
                                 <zip destfile="${project.build.directory}/${project.build.finalName}.zip">
                                     <zipfileset dir="${project.build.directory}" includes="lib/**" />
                                     <zipfileset dir="${project.build.directory}" includes="${project.build.finalName}.jar" />
+				    <zipfileset dir="${project.build.directory}" includes="${project.build.finalName}.war" />
                                     <zipfileset dir="${basedir}" includes="readme.txt" />
                                 </zip>
                             </target>

@@ -1,5 +1,9 @@
 <html>
+<head>
+	<meta charset="utf-8">
+	<title>DJView Web Application</title>
+</head>
 <body>
-<h2>Hello World!</h2>
+	<a href="DJView.jsp">DJView</a>
 </body>
 </html>

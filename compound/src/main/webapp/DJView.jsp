@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>DJ View</h1>
-Beats per minutes = <jsp:getProperty property="beatModel" name="BPM" />
+Beats per minutes = <jsp:getProperty name="beatModel" property="BPM" />
 <br />
 <hr>
 <br />

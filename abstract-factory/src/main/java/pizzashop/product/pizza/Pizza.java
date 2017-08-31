@@ -1,5 +1,6 @@
 package pizzashop.product.pizza;
 
+import pizzashop.abstractfactory.ingredient.PizzaIngredientFactory;
 import pizzashop.product.ingredient.Cheese;
 import pizzashop.product.ingredient.Clams;
 import pizzashop.product.ingredient.Dough;
@@ -9,12 +10,17 @@ import pizzashop.product.ingredient.Veggie;
 
 public abstract class Pizza {
 	private String name;
+	protected PizzaIngredientFactory ingredientFactory;
 	protected Dough dough;
 	protected Sauce sauce;
 	protected Veggie veggies[];
 	protected Cheese cheese;
 	protected Pepperoni pepperoni;
 	protected Clams clam;
+	
+	public Pizza(PizzaIngredientFactory ingredientFactory) {
+		this.ingredientFactory = ingredientFactory;
+	}
 
 	public abstract void prepare();
 

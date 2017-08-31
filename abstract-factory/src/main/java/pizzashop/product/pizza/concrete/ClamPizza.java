@@ -4,10 +4,9 @@ import pizzashop.abstractfactory.ingredient.PizzaIngredientFactory;
 import pizzashop.product.pizza.Pizza;
 
 public class ClamPizza extends Pizza {
-	PizzaIngredientFactory ingredientFactory;
 	
 	public ClamPizza(PizzaIngredientFactory ingredientFactory) {
-		this.ingredientFactory = ingredientFactory;
+		super(ingredientFactory);
 	}
 	
 	public void prepare() {

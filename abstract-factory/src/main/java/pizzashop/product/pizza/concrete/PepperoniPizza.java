@@ -4,10 +4,9 @@ import pizzashop.abstractfactory.ingredient.PizzaIngredientFactory;
 import pizzashop.product.pizza.Pizza;
 
 public class PepperoniPizza extends Pizza {
-	PizzaIngredientFactory ingredientFactory;
 	
 	public PepperoniPizza(PizzaIngredientFactory ingredientFactory) {
-		this.ingredientFactory = ingredientFactory;
+		super(ingredientFactory);
 	}
 
 	@Override

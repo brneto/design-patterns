@@ -6,16 +6,16 @@ import java.io.InputStreamReader;
 
 import barista.templatemethod.CaffeineBeverage;
 
-public class CoffeeWithHook extends CaffeineBeverage {
+public class TeaWithHook extends CaffeineBeverage {
 
 	@Override
 	public void brew() {
-		System.out.println("Dripping Coffee through filter");
+		System.out.println("Steeping the tea");
 	}
 
 	@Override
 	public void addCondiments() {
-		System.out.println("Adding Sugar and Milk");
+		System.out.println("Adding Lemon");
 	}
 
 	@Override
@@ -32,15 +32,14 @@ public class CoffeeWithHook extends CaffeineBeverage {
 	private String getUserInput() {
 		String answer = null;
 
-		System.out.print("Would you like milk and sugar with your coffee (y/n)? ");
+		System.out.print("Would you like lemon with your tea (y/n)? ");
 		
 		// Can't close the buffer reader after all reads are terminated
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		try {
+		try  {
 			answer = in.readLine();
 		} catch (IOException ioe) {
 			System.err.println("IO error trying to read your answer");
-			ioe.printStackTrace();
 		}
 
 		if (answer == null) {

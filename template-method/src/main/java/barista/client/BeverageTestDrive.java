@@ -3,23 +3,30 @@ package barista.client;
 import barista.implementation.Coffee;
 import barista.implementation.CoffeeWithHook;
 import barista.implementation.Tea;
+import barista.implementation.TeaWithHook;
 import barista.templatemethod.CaffeineBeverage;
 
 public class BeverageTestDrive {
 
 	public static void main(String[] args) {
-		CaffeineBeverage myTea = new Tea();
-		CaffeineBeverage myCoffee = new Coffee();
-		CaffeineBeverage myCoffeeWithHook = new CoffeeWithHook();
+		CaffeineBeverage tea = new Tea();
+		CaffeineBeverage coffee = new Coffee();
+		
 		
 		System.out.println("\nMaking tea...");
-		myTea.prepareRecipe();
+		tea.prepareRecipe();
 		
 		System.out.println("\nMaking coffee...");
-		myCoffee.prepareRecipe();
+		coffee.prepareRecipe();
+		
+		CaffeineBeverage teaHook = new TeaWithHook();
+		CaffeineBeverage coffeeHook = new CoffeeWithHook();
+		
+		System.out.println("\nMaking tea choosing condiments...");
+		teaHook.prepareRecipe();
 		
 		System.out.println("\nMaking coffee choosing condiments...");
-		myCoffeeWithHook.prepareRecipe();
+		coffeeHook.prepareRecipe();
 	}
 
 }

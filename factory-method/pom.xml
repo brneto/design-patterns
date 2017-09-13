@@ -49,7 +49,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>starbuzzcoffe.CoffeeOrder</mainClass>
+							<mainClass>pizzashop.PizzaTestDrive</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

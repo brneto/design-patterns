@@ -49,7 +49,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>starbuzzcoffe.CoffeeOrder</mainClass>
+							<mainClass>chocoholic.singleton.doublechecked.ChocolateBoilerClient</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

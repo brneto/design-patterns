@@ -1,5 +1,9 @@
 package chocoholic.singleton.doublechecked;
 
+//
+//Danger!  This implementation of Singleton not
+//guaranteed to work prior to Java 5
+//
 public final class ChocolateBoiler {
 	private volatile static ChocolateBoiler instance;
 	private boolean empty;

@@ -49,7 +49,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>starbuzzcoffe.CoffeeOrder</mainClass>
+							<mainClass>weatherdata.station.WeatherStation</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

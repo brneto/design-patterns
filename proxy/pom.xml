@@ -49,7 +49,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>starbuzzcoffe.CoffeeOrder</mainClass>
+							<mainClass>dynamicproxy.MatchMakingTestDrive</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

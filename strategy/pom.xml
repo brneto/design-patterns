@@ -49,7 +49,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>starbuzzcoffe.CoffeeOrder</mainClass>
+							<mainClass>simuduck.DuckSimulator</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

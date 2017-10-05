@@ -17,7 +17,11 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-
+	
+	<scm>
+		<developerConnection>scm:git:origin</developerConnection>
+	</scm>
+	
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>

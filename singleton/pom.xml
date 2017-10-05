@@ -46,8 +46,8 @@
 					<scmCommentPrefix xml:space="preserve">[maven] </scmCommentPrefix>
 					
 					<!-- Perform goal configuration -->
-					<useReleaseProfile>false</useReleaseProfile>
 					<localCheckout>true</localCheckout>
+					<useReleaseProfile>false</useReleaseProfile>
 					<goals>package</goals>
 				</configuration>
 			</plugin>

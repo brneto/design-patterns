@@ -4,7 +4,7 @@
 
 	<groupId>com.headfirstlabs</groupId>
 	<artifactId>singleton</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -17,7 +17,7 @@
 	
 	<scm>
 		<developerConnection>scm:git:origin</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>v1.1</tag>
   </scm>
 	
 	<build>

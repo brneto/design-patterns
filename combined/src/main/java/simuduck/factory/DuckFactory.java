@@ -3,8 +3,8 @@ package simuduck.factory;
 import simuduck.behavior.Quackable;
 
 public interface DuckFactory {
-	public Quackable createMallardDuck();
-	public Quackable createRedheadDuck();
-	public Quackable createDuckCall();
-	public Quackable createRubberDuck();
+	Quackable createMallardDuck();
+	Quackable createRedheadDuck();
+	Quackable createDuckCall();
+	Quackable createRubberDuck();
 }

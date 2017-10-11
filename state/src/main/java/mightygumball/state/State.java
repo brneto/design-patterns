@@ -1,9 +1,9 @@
 package mightygumball.state;
 
 public interface State {
-	public void insertQuarter();
-	public void ejectQuarter();
-	public void turnCrank();
-	public void dispense();
-	public void refill();
+	void insertQuarter();
+	void ejectQuarter();
+	void turnCrank();
+	void dispense();
+	void refill();
 }

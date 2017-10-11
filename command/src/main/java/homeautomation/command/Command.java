@@ -2,8 +2,8 @@ package homeautomation.command;
 
 public interface Command {
 
-	public void execute();
+	void execute();
 
-	public void undo();
+	void undo();
 
 }

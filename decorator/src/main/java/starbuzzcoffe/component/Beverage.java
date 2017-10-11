@@ -1,7 +1,7 @@
 package starbuzzcoffe.component;
 
 public interface Beverage {
-	public String description();
+	String description();
 
-	public double cost();
+	double cost();
 }

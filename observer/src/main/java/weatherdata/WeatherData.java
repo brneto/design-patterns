@@ -1,5 +1,6 @@
 package weatherdata;
 
+//Use PropertyChangeEvent and PropertyChangeListener from java.beans package.
 import java.util.Observable;
 
 public class WeatherData extends Observable {

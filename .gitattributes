@@ -2,15 +2,18 @@
 * text=auto
 
 # Text to be normalized
-*.php text
-*.css text
-*.js text
-*.htm text
-*.html text
-*.xml text
-*.txt text
-*.ini text
-*.inc text
+*.php diff=php
+*.css diff=css
+*.js diff=java
+*.java diff=java
+*.py diff=python
+*.htm diff=html
+*.html diff=html
+*.xml diff=html
+*.md text eol=crlf
+*.txt text eol=crlf
+*.ini text eol=crlf
+*.inc text eol=crlf
 *.DBK text eol=crlf
 *.DEC text eol=crlf
 *.REC text eol=crlf
@@ -20,12 +23,12 @@
 *.PDF diff=astextplain
 *.doc diff=astextplain
 *.DOC diff=astextplain
-*.docx diff=astextplain
-*.DOCX diff=astextplain
+*.docx diff=html
+*.DOCX diff=html
 *.xls diff=astextplain
 *.XLS diff=astextplain
-*.xlsx diff=astextplain
-*.XLSX diff=astextplain
+*.xlsx diff=html
+*.XLSX diff=html
 *.rtf diff=astextplain
 *.RTF diff=astextplain
 
@@ -50,3 +53,4 @@
 *.out binary
 *.exe binary
 *.com binary
+*.bin binary

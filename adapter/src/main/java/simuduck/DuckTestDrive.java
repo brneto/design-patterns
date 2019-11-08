@@ -1,10 +1,10 @@
 package simuduck;
 
-import simuduck.adaptee.Turkey;
-import simuduck.adaptee.type.WildTurkey;
+import simuduck.adaptee.type.Turkey;
+import simuduck.adaptee.WildTurkey;
 import simuduck.adaptor.TurkeyAdapter;
-import simuduck.client.Duck;
-import simuduck.client.type.MallardDuck;
+import simuduck.target.type.Duck;
+import simuduck.target.MallardDuck;
 
 public class DuckTestDrive {
 

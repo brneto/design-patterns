@@ -1,10 +1,10 @@
 package simuduck.adaptor;
 
-import simuduck.adaptee.Turkey;
-import simuduck.client.Duck;
+import simuduck.adaptee.type.Turkey;
+import simuduck.target.type.Duck;
 
 public class TurkeyAdapter implements Duck {
-	private Turkey turkey;
+	final private Turkey turkey;
 
 	public TurkeyAdapter(Turkey turkey) {
 		this.turkey = turkey;

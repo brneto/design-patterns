@@ -1,6 +1,6 @@
-package simuduck.adaptee.type;
+package simuduck.adaptee;
 
-import simuduck.adaptee.Turkey;
+import simuduck.adaptee.type.Turkey;
 
 public class WildTurkey implements Turkey {
 

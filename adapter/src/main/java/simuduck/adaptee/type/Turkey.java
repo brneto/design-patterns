@@ -1,4 +1,4 @@
-package simuduck.adaptee;
+package simuduck.adaptee.type;
 
 public interface Turkey {
 	void gobble();

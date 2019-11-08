@@ -3,7 +3,7 @@ package starbuzzcoffe.decorator;
 import starbuzzcoffe.component.Beverage;
 
 public abstract class Condiment implements Beverage {
-	private Beverage beverage;
+	final private Beverage beverage;
 
 	public Condiment(Beverage beverage) {
 		this.beverage = beverage;

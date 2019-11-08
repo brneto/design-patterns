@@ -1,6 +1,6 @@
 Decorator Pattern
 ======
-## Class Diagram
+### Class Diagram
 ![diagram][decorator-diagram]
 
 ## Executable JAR

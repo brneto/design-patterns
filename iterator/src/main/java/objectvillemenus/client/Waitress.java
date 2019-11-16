@@ -5,20 +5,21 @@ import java.util.ArrayList;
 import objectvillemenus.aggregate.Menu;
 
 public class Waitress {
-	ArrayList<Menu> menus;
 
-	public Waitress(ArrayList<Menu> menus) {
-		this.menus = menus;
-	}
+  ArrayList<Menu> menus;
 
-	public void printMenu() {
-		menus.forEach(this::printMenu);
-	}
+  public Waitress(ArrayList<Menu> menus) {
+    this.menus = menus;
+  }
 
-	private void printMenu(Menu menuItems) {
-		menuItems.forEach(e -> System.out.println(
-								e.getName() + ", " + 
-								e.getPrice() + " -- " + 
-								e.getDescription()));
-	}
+  public void printMenu() {
+    menus.forEach(this::printMenu);
+  }
+
+  private void printMenu(Menu menuItems) {
+    menuItems.forEach(e -> System.out.println(
+        e.getName() + ", " +
+            e.getPrice() + " -- " +
+            e.getDescription()));
+  }
 }

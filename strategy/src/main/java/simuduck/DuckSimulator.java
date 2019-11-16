@@ -10,34 +10,34 @@ import simuduck.client.type.ModelDuck;
 
 /**
  * The Strategy Pattern:
- * 
+ *
  * Defines a family of algorithms (FlyBehavior and QuackBehavior), encapsulates
  * each one, and makes them interchangeable. Strategy lets the algorithms vary
  * independently from clients that use it.
  */
 public class DuckSimulator {
 
-	public static void main(String[] args) {
-		DuckSimulator simulator = new DuckSimulator();
-		Duck mallard = new MallardDuck();
-		Duck model = new ModelDuck();
+  public static void main(String[] args) {
+    DuckSimulator simulator = new DuckSimulator();
+    Duck mallard = new MallardDuck();
+    Duck model = new ModelDuck();
 
-		mallard.setFlyBehavior(new FlyWithWings());
-		mallard.setQuackBehavior(new Quack());
+    mallard.setFlyBehavior(new FlyWithWings());
+    mallard.setQuackBehavior(new Quack());
 
-		model.setFlyBehavior(new FlyRocketPowered());
-		model.setQuackBehavior(new MuteQuack());
+    model.setFlyBehavior(new FlyRocketPowered());
+    model.setQuackBehavior(new MuteQuack());
 
-		simulator.perform(mallard);
-		System.out.println("");
-		simulator.perform(model);
-	}
+    simulator.perform(mallard);
+    System.out.println("");
+    simulator.perform(model);
+  }
 
-	public void perform(Duck duck) {
-		duck.display();
-		duck.quack();
-		duck.swim();
-		duck.fly();
-	}
+  public void perform(Duck duck) {
+    duck.display();
+    duck.quack();
+    duck.swim();
+    duck.fly();
+  }
 
 }

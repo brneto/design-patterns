@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 import objectvillemenus.elements.MenuItem;
 
-public class CafeMenu implements Menu {
+public class CafeMenu implements Iterable<MenuItem> {
 
   HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
 

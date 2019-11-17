@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 import objectvillemenus.elements.MenuItem;
 
-public class PancakeHouseMenu implements Menu {
+public class PancakeHouseMenu implements Iterable<MenuItem> {
 
   private ArrayList<MenuItem> menuItems;
 

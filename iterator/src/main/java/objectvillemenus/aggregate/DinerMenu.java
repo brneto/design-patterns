@@ -3,9 +3,9 @@ package objectvillemenus.aggregate;
 import java.util.Iterator;
 
 import objectvillemenus.elements.MenuItem;
-import objectvillemenus.iterator.DinerMenuIterator;
+import objectvillemenus.iterator.MenuItemIterator;
 
-public class DinerMenu implements Menu {
+public class DinerMenu implements Iterable<MenuItem> {
 
   private static final int MAX_ITEMS = 6;
   private int numberOfItems = 0;
@@ -43,6 +43,6 @@ public class DinerMenu implements Menu {
 
   @Override
   public Iterator<MenuItem> iterator() {
-    return new DinerMenuIterator(menuItems);
+    return new MenuItemIterator(menuItems);
   }
 }

@@ -1,34 +1,29 @@
 package objectvillemenus.iterator;
 
+import static java.util.Optional.ofNullable;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 import objectvillemenus.elements.MenuItem;
 
-public class DinerMenuIterator implements Iterator<MenuItem> {
+public class MenuItemIterator implements Iterator<MenuItem> {
 
   private MenuItem[] items;
   private int position;
 
-  public DinerMenuIterator(MenuItem[] items) {
+  public MenuItemIterator(MenuItem[] items) {
     this.items = items;
   }
 
   @Override
   public MenuItem next() {
-    if (hasNext()) {
-      return items[position++];
-    } else {
-      throw new NoSuchElementException();
-    }
+    if (!hasNext()) throw new NoSuchElementException();
+    return items[position++];
   }
 
   @Override
   public boolean hasNext() {
-    if (position >= items.length || items[position] == null) {
-      return false;
-    }
-    return true;
+    return position < items.length && ofNullable(items[position]).isPresent();
   }
 
   @Override

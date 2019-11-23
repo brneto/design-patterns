@@ -28,7 +28,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>objectvillemenus.CartTestDrive</mainClass>
+              <mainClass>objectvilleshop.ShopTestDrive</mainClass>
             </manifest>
           </archive>
         </configuration>

@@ -1,13 +1,15 @@
-package objectvillemenus.aggregate;
+package objectvillemenus.aggregator.type;
 
 import java.util.HashMap;
 import java.util.Iterator;
 
-import objectvillemenus.elements.MenuItem;
+import java.util.Map;
+import objectvillemenus.aggregator.Menu;
+import objectvillemenus.element.MenuItem;
 
-public class CafeMenu implements Iterable<MenuItem> {
+public class CafeMenu implements Menu {
 
-  HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
+  private final Map<String, MenuItem> menuItems = new HashMap<>();
 
   public CafeMenu() {
     addItem("Veggie Burger and Air Fries",

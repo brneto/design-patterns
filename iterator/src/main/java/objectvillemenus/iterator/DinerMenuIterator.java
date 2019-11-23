@@ -4,14 +4,14 @@ import static java.util.Optional.ofNullable;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import objectvillemenus.elements.MenuItem;
+import objectvillemenus.element.MenuItem;
 
-public class MenuItemIterator implements Iterator<MenuItem> {
+public class DinerMenuIterator implements Iterator<MenuItem> {
 
-  private MenuItem[] items;
+  private final MenuItem[] items;
   private int position;
 
-  public MenuItemIterator(MenuItem[] items) {
+  public DinerMenuIterator(MenuItem[] items) {
     this.items = items;
   }
 
@@ -28,16 +28,17 @@ public class MenuItemIterator implements Iterator<MenuItem> {
 
   @Override
   public void remove() {
-    if (position <= 0) {
+    if (position < 1) {
       throw new IllegalStateException
           ("You can’t remove an item until you’ve done at least one next()");
     }
-    if (items[position - 1] != null) {
-      for (int i = position - 1; i < (items.length - 1); i++) {
-        items[i] = items[i + 1];
-      }
-      items[items.length - 1] = null;
-    }
+    ofNullable(items[position - 1])
+        .ifPresent(e -> {
+          for (int i = position - 1; i < (items.length - 1); i++) {
+            items[i] = items[i + 1];
+          }
+          items[items.length - 1] = null;
+        });
   }
 
 }

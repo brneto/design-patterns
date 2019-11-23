@@ -1,4 +1,4 @@
-package objectvillemenus.elements;
+package objectvillemenus.element;
 
 public class MenuItem {
 

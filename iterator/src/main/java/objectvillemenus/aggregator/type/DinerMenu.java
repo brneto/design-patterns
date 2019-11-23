@@ -1,19 +1,18 @@
-package objectvillemenus.aggregate;
+package objectvillemenus.aggregator.type;
 
 import java.util.Iterator;
 
-import objectvillemenus.elements.MenuItem;
-import objectvillemenus.iterator.MenuItemIterator;
+import objectvillemenus.aggregator.Menu;
+import objectvillemenus.element.MenuItem;
+import objectvillemenus.iterator.DinerMenuIterator;
 
-public class DinerMenu implements Iterable<MenuItem> {
+public class DinerMenu implements Menu {
 
   private static final int MAX_ITEMS = 6;
   private int numberOfItems = 0;
-  private MenuItem[] menuItems;
+  private final MenuItem[] menuItems = new MenuItem[MAX_ITEMS];
 
   public DinerMenu() {
-    menuItems = new MenuItem[MAX_ITEMS];
-
     addItem("Vegetarian BLT",
         "(Fakin’) Bacon with lettuce & tomato on whole wheat",
         true, 2.99);
@@ -43,6 +42,6 @@ public class DinerMenu implements Iterable<MenuItem> {
 
   @Override
   public Iterator<MenuItem> iterator() {
-    return new MenuItemIterator(menuItems);
+    return new DinerMenuIterator(menuItems);
   }
 }

@@ -1,17 +1,17 @@
-package objectvillemenus.aggregate;
+package objectvillemenus.aggregator.type;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import objectvillemenus.elements.MenuItem;
+import java.util.List;
+import objectvillemenus.aggregator.Menu;
+import objectvillemenus.element.MenuItem;
 
-public class PancakeHouseMenu implements Iterable<MenuItem> {
+public class PancakeHouseMenu implements Menu {
 
-  private ArrayList<MenuItem> menuItems;
+  private final List<MenuItem> menuItems = new ArrayList<>();
 
   public PancakeHouseMenu() {
-    menuItems = new ArrayList<MenuItem>();
-
     addItem("K&B’s Pancake Breakfast",
         "Pancakes with scrambled eggs, and toast",
         true, 2.99);

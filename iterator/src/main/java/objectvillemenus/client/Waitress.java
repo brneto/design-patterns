@@ -1,12 +1,13 @@
 package objectvillemenus.client;
 
-import java.util.ArrayList;
+import java.util.List;
+import objectvillemenus.aggregator.Menu;
 
 public class Waitress {
 
-  ArrayList<Menu> menus;
+  private final List<Menu> menus;
 
-  public Waitress(ArrayList<Menu> menus) {
+  public Waitress(List<Menu> menus) {
     this.menus = menus;
   }
 
@@ -16,8 +17,6 @@ public class Waitress {
 
   private void printMenu(Menu menuItems) {
     menuItems.forEach(e -> System.out.println(
-        e.getName() + ", " +
-            e.getPrice() + " -- " +
-            e.getDescription()));
+        String.format("%s, %.2f -- %s", e.getName(), e.getPrice(), e.getDescription())));
   }
 }

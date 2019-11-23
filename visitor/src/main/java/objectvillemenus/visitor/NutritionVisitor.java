@@ -1,5 +1,6 @@
 package objectvillemenus.visitor;
 
+import objectvillemenus.aggregator.Menu;
 import objectvillemenus.element.MenuItem;
 
 public class NutritionVisitor implements Visitor {
@@ -15,6 +16,11 @@ public class NutritionVisitor implements Visitor {
     calories = menuItem.isVegetarian() ? 3 : 10;
     protein = menuItem.isVegetarian() ? 4 : 10;
     carbs = menuItem.isVegetarian() ? 5 : 9;
+  }
+
+  @Override
+  public void visit(Menu menu) {
+    menu.forEach(m -> rating++);
   }
 
   public int getHealthRating() { return rating; }

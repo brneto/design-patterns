@@ -11,7 +11,15 @@ public class Waitress {
 
   public Waitress(List<Menu> menus) { this.menus = menus; }
 
-  public void printMenu() { menus.forEach(this::printMenu); }
+  public void printMenu() {
+    menus.forEach(m -> {
+      nutrition.visit(m);
+      printMenu(m);
+
+      System.out.println(
+          String.format("Rating: %s", nutrition.getHealthRating()));
+    });
+  }
 
   private void printMenu(Menu menuItems) {
     menuItems.forEach(i -> {

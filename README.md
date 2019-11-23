@@ -1,2 +1,2 @@
-OOP Design Patterns in Java
+OOP Design Patterns Examples in Java
 ======

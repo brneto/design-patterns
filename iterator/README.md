@@ -1,12 +1,12 @@
-Iterator Pattern
+Visitor  Pattern
 ======
 ### Class Diagram
-![diagram][iterator-diagram]
+![diagram][visitor-diagram]
 
 ## Executable JAR
 This is an executable JAR package. To run it, use the following command:
 
-`java -jar target/iterator.jar`
+`java -jar target/visitor.jar`
 
 <!--images reference-->
-[iterator-diagram]: ./IteratorClassDiagram.png "Iterator Pattern UML Class Diagram"
+[visitor-diagram]: ./VisitorClassDiagram.png "Visitor Pattern UML Class Diagram"

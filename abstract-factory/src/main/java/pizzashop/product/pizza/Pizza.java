@@ -22,22 +22,26 @@ public abstract class Pizza {
 		this.ingredientFactory = ingredientFactory;
 	}
 
-	public abstract void prepare();
+	public abstract Pizza prepare();
 
-	public void bake() {
+	public Pizza bake() {
 		System.out.println("Bake for 25 minutes at 350");
+		return this;
 	}
 
-	public void cut() {
+	public Pizza cut() {
 		System.out.println("Cutting the pizza into diagonal slices");
+		return this;
 	}
 
-	public void box() {
+	public Pizza box() {
 		System.out.println("Place pizza in official PizzaStore box");
+		return this;
 	}
 
-	public void setName(String name) {
+	public Pizza setName(String name) {
 		this.name = name;
+		return this;
 	}
 
 	public String getName() {

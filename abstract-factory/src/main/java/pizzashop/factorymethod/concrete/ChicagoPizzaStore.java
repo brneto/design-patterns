@@ -15,26 +15,20 @@ public class ChicagoPizzaStore extends PizzaStore {
 
 	@Override
 	protected Pizza createPizza(PizzaType type) throws InvalidPizzaType {
-		String style = "Chicago";
+		String style = "Chicago Style Cheese Pizza";
 		PizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory();
 		
 		switch (type) {
 		case CHEESE:
-			return pizzaStyle(new CheesePizza(ingredientFactory), style);
+			return (new CheesePizza(ingredientFactory)).setName(style);
 		case PEPPERONI:
-			return pizzaStyle(new PepperoniPizza(ingredientFactory), style);
+			return (new PepperoniPizza(ingredientFactory)).setName(style);
 		case CLAM:
-			return pizzaStyle(new ClamPizza(ingredientFactory), style);
+			return (new ClamPizza(ingredientFactory)).setName(style);
 		case VEGGIE:
-			return pizzaStyle(new VeggiePizza(ingredientFactory), style);
+			return (new VeggiePizza(ingredientFactory)).setName(style);
 		default:
 			throw new InvalidPizzaType(type);
 		}
 	}
-	
-	private Pizza pizzaStyle(Pizza pizza, String style) {
-		pizza.setName(style + " Style Cheese Pizza");
-		return pizza;
-	}
-
 }

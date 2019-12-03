@@ -15,5 +15,20 @@ public abstract class PizzaStore {
 	}
 
 	protected abstract Pizza createPizza(PizzaType type) throws InvalidPizzaType;
+	
+	Pizza addIngredients(PizzaType type, PizzaIngredientFactory ingredientFactory) throws InvalidPizzaType {
+		switch (type) {
+		case CHEESE:
+			return new CheesePizza(ingredientFactory);
+		case PEPPERONI:
+			return new PepperoniPizza(ingredientFactory);
+		case CLAM:
+			return new ClamPizza(ingredientFactory);
+		case VEGGIE:
+			return new VeggiePizza(ingredientFactory);
+		default:
+			throw new InvalidPizzaType(type);
+		}
+	}
 
 }

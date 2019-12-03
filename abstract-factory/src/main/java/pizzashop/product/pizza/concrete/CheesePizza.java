@@ -10,11 +10,12 @@ public class CheesePizza extends Pizza {
 	}
 
 	@Override
-	public void prepare() {
+	public CheesePizza prepare() {
 		System.out.println("preparing " + getName());
 		dough = ingredientFactory.createDough();
 		sauce = ingredientFactory.createSauce();
 		cheese = ingredientFactory.createCheese();
+		return this;
 	}
 
 }

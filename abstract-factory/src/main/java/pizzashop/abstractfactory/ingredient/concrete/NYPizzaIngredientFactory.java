@@ -19,38 +19,38 @@ import pizzashop.product.ingredient.concrete.ThinCrustDough;
 
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 
-	@Override
-	public Dough createDough() {
-		return new ThinCrustDough();
-	}
+  @Override
+  public Dough createDough() {
+    return new ThinCrustDough();
+  }
 
-	@Override
-	public Sauce createSauce() {
-		return new MarinaraSauce();
-	}
+  @Override
+  public Sauce createSauce() {
+    return new MarinaraSauce();
+  }
 
-	@Override
-	public Cheese createCheese() {
-		return new ReggianoCheese();
-	}
+  @Override
+  public Cheese createCheese() {
+    return new ReggianoCheese();
+  }
 
-	@Override
-	public Veggie[] createVerggies() {
-		Veggie[] veggies = { new Garlic(),
-							 new Onion(),
-							 new Mushroom(),
-							 new RedPepper() };
-		return veggies;
-	}
+  @Override
+  public Veggie[] createVerggies() {
+    Veggie[] veggies = {new Garlic(),
+        new Onion(),
+        new Mushroom(),
+        new RedPepper()};
+    return veggies;
+  }
 
-	@Override
-	public Pepperoni createPepperoni() {
-		return new SlicedPepperoni();
-	}
+  @Override
+  public Pepperoni createPepperoni() {
+    return new SlicedPepperoni();
+  }
 
-	@Override
-	public Clams createClam() {
-		return new FreshClams();
-	}
+  @Override
+  public Clams createClam() {
+    return new FreshClams();
+  }
 
 }

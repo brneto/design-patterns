@@ -9,16 +9,16 @@ import pizzashop.product.ingredient.Veggie;
 
 public interface PizzaIngredientFactory {
 
-	Dough createDough();
+  Dough createDough();
 
-	Sauce createSauce();
+  Sauce createSauce();
 
-	Cheese createCheese();
+  Cheese createCheese();
 
-	Veggie[] createVerggies();
+  Veggie[] createVerggies();
 
-	Pepperoni createPepperoni();
+  Pepperoni createPepperoni();
 
-	Clams createClam();
+  Clams createClam();
 
 }

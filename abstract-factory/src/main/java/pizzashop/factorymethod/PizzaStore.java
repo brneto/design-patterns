@@ -11,7 +11,7 @@ import pizzashop.product.pizza.type.PizzaType;
 
 public abstract class PizzaStore {
 
-  protected final PizzaIngredientFactory ingredientFactory;
+  private final PizzaIngredientFactory ingredientFactory;
 
   protected PizzaStore(PizzaIngredientFactory ingredientFactory) {
     this.ingredientFactory = ingredientFactory;

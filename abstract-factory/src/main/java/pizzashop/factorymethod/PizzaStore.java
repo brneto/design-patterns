@@ -11,6 +11,12 @@ import pizzashop.product.pizza.type.PizzaType;
 
 public abstract class PizzaStore {
 
+  protected final PizzaIngredientFactory ingredientFactory;
+
+  protected PizzaStore(PizzaIngredientFactory ingredientFactory) {
+    this.ingredientFactory = ingredientFactory;
+  }
+
   public final Pizza orderPizza(PizzaType type) {
     return createPizza(type)
         .prepare()
@@ -19,10 +25,7 @@ public abstract class PizzaStore {
         .box();
   }
 
-  protected abstract Pizza createPizza(PizzaType type) throws InvalidPizzaType;
-
-  protected Pizza addIngredients(PizzaType type, PizzaIngredientFactory ingredientFactory)
-      throws InvalidPizzaType {
+  protected final Pizza choosePizza(PizzaType type) throws InvalidPizzaType {
     switch (type) {
       case CHEESE:
         return new CheesePizza(ingredientFactory);
@@ -36,5 +39,7 @@ public abstract class PizzaStore {
         throw new InvalidPizzaType(type);
     }
   }
+
+  protected abstract Pizza createPizza(PizzaType type) throws InvalidPizzaType;
 
 }

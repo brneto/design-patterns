@@ -8,9 +8,12 @@ import pizzashop.product.pizza.type.PizzaType;
 
 public class ChicagoPizzaStore extends PizzaStore {
 
+  public ChicagoPizzaStore() {
+    super(new ChicagoPizzaIngredientFactory());
+  }
+
   @Override
   protected Pizza createPizza(PizzaType type) throws InvalidPizzaType {
-    return addIngredients(type, new ChicagoPizzaIngredientFactory())
-        .setName("Chicago Style Cheese Pizza");
+    return choosePizza(type).setName("Chicago Style Cheese Pizza");
   }
 }

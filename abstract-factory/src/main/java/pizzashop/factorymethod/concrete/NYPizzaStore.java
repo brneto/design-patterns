@@ -8,10 +8,13 @@ import pizzashop.product.pizza.type.PizzaType;
 
 public class NYPizzaStore extends PizzaStore {
 
+  public NYPizzaStore() {
+    super(new NYPizzaIngredientFactory());
+  }
+
   @Override
   protected Pizza createPizza(PizzaType type) throws InvalidPizzaType {
-    return addIngredients(type, new NYPizzaIngredientFactory())
-        .setName("New York Style Cheese Pizza");
+    return choosePizza(type).setName("New York Style Cheese Pizza");
   }
 
 }

@@ -25,7 +25,7 @@ public abstract class PizzaStore {
         .box();
   }
 
-  protected final Pizza choosePizza(PizzaType type) throws InvalidPizzaType {
+  protected final Pizza pickPizza(PizzaType type) throws InvalidPizzaType {
     switch (type) {
       case CHEESE:
         return new CheesePizza(ingredientFactory);

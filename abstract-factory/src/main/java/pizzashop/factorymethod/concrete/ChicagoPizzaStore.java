@@ -14,6 +14,6 @@ public class ChicagoPizzaStore extends PizzaStore {
 
   @Override
   protected Pizza createPizza(PizzaType type) throws InvalidPizzaType {
-    return choosePizza(type).setName("Chicago Style Cheese Pizza");
+    return pickPizza(type).setName("Chicago Style Cheese Pizza");
   }
 }

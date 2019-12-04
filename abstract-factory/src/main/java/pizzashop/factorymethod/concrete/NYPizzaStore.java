@@ -14,7 +14,7 @@ public class NYPizzaStore extends PizzaStore {
 
   @Override
   protected Pizza createPizza(PizzaType type) throws InvalidPizzaType {
-    return choosePizza(type).setName("New York Style Cheese Pizza");
+    return pickPizza(type).setName("New York Style Cheese Pizza");
   }
 
 }

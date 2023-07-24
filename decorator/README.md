@@ -3,6 +3,8 @@ Decorator Pattern
 ### Class Diagram
 ![diagram][decorator-diagram]
 
+It allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class. Which means that functionality can be divided between classes with unique areas of concern (Single Responsability Principle), it also allows the class functionality to be extended without being modified (Open-Closed Principle)
+
 ## Executable JAR
 This is an executable JAR package. To run it, use the following command:
 

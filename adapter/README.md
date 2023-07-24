@@ -1,6 +1,8 @@
-Object Adapter Pattern
+Adapter Pattern (Structural)
 ======
 ### Class Diagram
+ It allows the interface of an existing class to be used as another interface. It is commonly used to make existing classes work with others without modifying their source code.
+
 ![diagram][adapter-diagram]
 
 ## Executable JAR

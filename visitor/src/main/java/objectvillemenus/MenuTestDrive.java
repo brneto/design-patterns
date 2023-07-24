@@ -1,13 +1,15 @@
 package objectvillemenus;
 
-import java.util.ArrayList;
-
-import java.util.List;
+import objectvillemenus.aggregator.Menu;
 import objectvillemenus.aggregator.type.CafeMenu;
 import objectvillemenus.aggregator.type.DinerMenu;
-import objectvillemenus.aggregator.Menu;
 import objectvillemenus.aggregator.type.PancakeHouseMenu;
 import objectvillemenus.client.Waitress;
+import objectvillemenus.visitor.NutritionVisitor;
+import objectvillemenus.visitor.Visitor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MenuTestDrive {
 
@@ -18,6 +20,8 @@ public class MenuTestDrive {
     menus.add(new CafeMenu());
 
     Waitress waitress = new Waitress(menus);
+    Visitor nutrition = new NutritionVisitor();
+    waitress.accept(nutrition);
 
     waitress.printMenu();
   }

@@ -1,23 +1,30 @@
 package objectvillemenus.client;
 
-import java.util.List;
 import objectvillemenus.aggregator.Menu;
-import objectvillemenus.visitor.NutritionVisitor;
+import objectvillemenus.visitor.Visitor;
+
+import java.util.List;
+
+import static java.util.Objects.requireNonNull;
 
 public class Waitress {
 
   private final List<Menu> menus;
-  private final NutritionVisitor nutrition = new NutritionVisitor();
+  private Visitor nutrition;
 
   public Waitress(List<Menu> menus) { this.menus = menus; }
+
+  public void accept(Visitor visitor) {
+    requireNonNull(visitor);
+    this.nutrition = visitor;
+  }
 
   public void printMenu() {
     menus.forEach(m -> {
       nutrition.visit(m);
-      printMenu(m);
 
-      System.out.println(
-          String.format("Rating: %s", nutrition.getHealthRating()));
+      printMenu(m);
+      System.out.printf("Rating: %s%n", nutrition.getHealthRating());
     });
   }
 
@@ -25,16 +32,11 @@ public class Waitress {
     menuItems.forEach(i -> {
       nutrition.visit(i);
 
-      System.out.println(
-        String.format("%s, %.2f -- %s", i.getName(), i.getPrice(), i.getDescription()));
-      System.out.println(
-          String.format("Rating: %s", nutrition.getHealthRating()));
-      System.out.println(
-          String.format("Calories: %s", nutrition.getCalories()));
-      System.out.println(
-          String.format("Protein: %s", nutrition.getProtein()));
-      System.out.println(
-          String.format("Carbs: %s", nutrition.getCarbs()));
+      System.out.printf("%s, %.2f -- %s%n", i.getName(), i.getPrice(), i.getDescription());
+      System.out.printf("Rating: %s%n", nutrition.getHealthRating());
+      System.out.printf("Calories: %s%n", nutrition.getCalories());
+      System.out.printf("Protein: %s%n", nutrition.getProtein());
+      System.out.printf("Carbs: %s%n", nutrition.getCarbs());
     });
   }
 }

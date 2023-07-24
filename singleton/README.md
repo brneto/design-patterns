@@ -1,6 +1,8 @@
-Singleton Pattern
+Singleton Pattern (Creational)
 ======
 ### Class Diagram
+It restricts the instantiation of a class to a singular instance.
+
 ![diagram][singleton-diagram]
 
 ## Executable JAR

@@ -1,6 +1,8 @@
-Strategy Pattern
+Strategy Pattern (Behavioral)
 ======
 ### Class Diagram
+It enables selecting an algorithm by runtime avoiding change the original object code directly.
+
 ![diagram][strategy-diagram]
 
 ## Executable JAR

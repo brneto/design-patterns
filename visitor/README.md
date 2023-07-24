@@ -1,6 +1,8 @@
-Visitor Pattern
+Visitor Pattern (Behavioral)
 ======
 ### Class Diagram
+It allows define a new operation to a Composite structure without introducing modifications to the structure itself.
+
 ![diagram][visitor-diagram]
 
 ## Executable JAR
